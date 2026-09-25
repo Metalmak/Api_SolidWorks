@@ -1,0 +1,57 @@
+<!-- source: epdmapi/EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject_members.html -->
+
+![](dotnetimages/collapse.gif)
+![](dotnetimages/expand.gif)
+![](dotnetimages/collapse.gif)
+![](dotnetimages/expand.gif)
+![](dotnetimages/drpdown.gif)
+![](dotnetimages/drpdown_orange.gif)
+![](dotnetimages/copycode.gif)
+![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS PDM Professional API Help | Send Feedback |
+
+| EdmSelectionObject Structure Members | |
+| [See Also](#seealsobookmark)  [Fields](#FieldsBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All Expand All  ![](dotnetimages/drpdown.gif)  Members Options: Show All  Members Options: Filtered |
+
+|  |
+| --- |
+| [EPDM.Interop.epdm Namespace](EPDM.Interop.epdm~EPDM.Interop.epdm_namespace.html) : EdmSelectionObject Structure |
+
+[ ]
+
+Include Inherited Members
+
+[ ]
+
+Include Protected Members
+
+The following tables list the members exposed by [EdmSelectionObject](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject.html).
+
+# ![](dotnetimages/collapse.gif)Public Fields
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![public Field](dotnetimages/publicField.gif) | [mbsPath](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mbsPath.html) | Object's path. |
+| ![public Field](dotnetimages/publicField.gif) | [meType](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~meType.html) | Object type. |
+| ![public Field](dotnetimages/publicField.gif) | [mlGetVersion](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mlGetVersion.html) | Version to get. |
+| ![public Field](dotnetimages/publicField.gif) | [mlID](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mlID.html) | Object's database ID. |
+| ![public Field](dotnetimages/publicField.gif) | [mlLatestVersion](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mlLatestVersion.html) | Latest version. |
+| ![public Field](dotnetimages/publicField.gif) | [mlLocalVersion](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mlLocalVersion.html) | Local version. |
+| ![public Field](dotnetimages/publicField.gif) | [mlProjectID](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject~mlProjectID.html) | Object's parent folder ID. |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[EdmSelectionObject Structure](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmSelectionObject.html)
+
+[EPDM.Interop.epdm Namespace](EPDM.Interop.epdm~EPDM.Interop.epdm_namespace.html)

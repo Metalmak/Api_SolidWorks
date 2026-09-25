@@ -1,0 +1,81 @@
+<!-- source: swdocmgrapi/SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertExtrudeFeature~GetTopBlends.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Document Manager API Help | Send comments on this topic. |
+| GetTopBlends Method (ISwDMDimXpertExtrudeFeature) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swdocumentmgr Namespace](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr_namespace.html) > [ISwDMDimXpertExtrudeFeature Interface](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertExtrudeFeature.html) : GetTopBlends Method (ISwDMDimXpertExtrudeFeature) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets the DimXpert blend feature at the top of this DimXpert extrude.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetTopBlends() As SwDMDimXpertFeature ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISwDMDimXpertExtrudeFeature Dim value As SwDMDimXpertFeature   value = instance.GetTopBlends() ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` SwDMDimXpertFeature GetTopBlends() ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` SwDMDimXpertFeature^ GetTopBlends(); ``` | |
+
+#### Return Value
+
+[ISwDMDimXpertFeature](SOLIDWORKS.Interop.swdocumentmgr~SOLIDWORKS.Interop.swdocumentmgr.ISwDMDimXpertFeature.html)
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See SwDMDimXpertExtrudeFeature::GetTopBlends.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the examples on the interface page.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+The top blend is typically an [ISwDMDimXpertFilletFeature](SOLIDWORKS.Interop.swdocumentmgr~SOLIDWORKS.Interop.swdocumentmgr.ISwDMDimXpertFilletFeature.html).
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISwDMDimXpertExtrudeFeature Interface](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertExtrudeFeature.html)
+
+[ISwDMDimXpertExtrudeFeature Members](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertExtrudeFeature_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2010 FCS, Revision Number 18.0

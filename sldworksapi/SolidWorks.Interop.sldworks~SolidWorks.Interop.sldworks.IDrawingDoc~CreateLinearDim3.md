@@ -1,0 +1,173 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc~CreateLinearDim3.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| CreateLinearDim3 Method (IDrawingDoc) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IDrawingDoc Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc.html) : CreateLinearDim3 Method (IDrawingDoc) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*P0*
+
+*P1*
+
+*P2*
+
+*P3*
+
+*P4*
+
+*Val*
+
+*PrimPrec*
+
+*Text*
+
+*TextPoint*
+
+*Angle*
+
+*TextHeight*
+
+*Prefix*
+
+*Suffix*
+
+*Callout1*
+
+*Callout2*
+
+*TolType*
+
+*TolMin*
+
+*TolMax*
+
+*TolPrec*
+
+*ArrowSize*
+
+*ArrowStyle*
+
+*ArrowDir*
+
+*WitnessGap*
+
+*WitnessOvershoot*
+
+*DualDisplay*
+
+*DualPrec*
+
+Obsolete. Superseded by [IDrawingDoc::CreateLinearDim4](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IDrawingDoc~CreateLinearDim4.html).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function CreateLinearDim3( _    ByVal P0 As System.Object, _    ByVal P1 As System.Object, _    ByVal P2 As System.Object, _    ByVal P3 As System.Object, _    ByVal P4 As System.Object, _    ByVal Val As System.Double, _    ByVal PrimPrec As System.Integer, _    ByVal Text As System.String, _    ByVal TextPoint As System.Object, _    ByVal Angle As System.Double, _    ByVal TextHeight As System.Double, _    ByVal Prefix As System.String, _    ByVal Suffix As System.String, _    ByVal Callout1 As System.String, _    ByVal Callout2 As System.String, _    ByVal TolType As System.Integer, _    ByVal TolMin As System.String, _    ByVal TolMax As System.String, _    ByVal TolPrec As System.Integer, _    ByVal ArrowSize As System.Double, _    ByVal ArrowStyle As System.Integer, _    ByVal ArrowDir As System.Integer, _    ByVal WitnessGap As System.Double, _    ByVal WitnessOvershoot As System.Double, _    ByVal DualDisplay As System.Boolean, _    ByVal DualPrec As System.Integer _ ) As System.Object ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IDrawingDoc Dim P0 As System.Object Dim P1 As System.Object Dim P2 As System.Object Dim P3 As System.Object Dim P4 As System.Object Dim Val As System.Double Dim PrimPrec As System.Integer Dim Text As System.String Dim TextPoint As System.Object Dim Angle As System.Double Dim TextHeight As System.Double Dim Prefix As System.String Dim Suffix As System.String Dim Callout1 As System.String Dim Callout2 As System.String Dim TolType As System.Integer Dim TolMin As System.String Dim TolMax As System.String Dim TolPrec As System.Integer Dim ArrowSize As System.Double Dim ArrowStyle As System.Integer Dim ArrowDir As System.Integer Dim WitnessGap As System.Double Dim WitnessOvershoot As System.Double Dim DualDisplay As System.Boolean Dim DualPrec As System.Integer Dim value As System.Object   value = instance.CreateLinearDim3(P0, P1, P2, P3, P4, Val, PrimPrec, Text, TextPoint, Angle, TextHeight, Prefix, Suffix, Callout1, Callout2, TolType, TolMin, TolMax, TolPrec, ArrowSize, ArrowStyle, ArrowDir, WitnessGap, WitnessOvershoot, DualDisplay, DualPrec) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.object CreateLinearDim3(     System.object P0,    System.object P1,    System.object P2,    System.object P3,    System.object P4,    System.double Val,    System.int PrimPrec,    System.string Text,    System.object TextPoint,    System.double Angle,    System.double TextHeight,    System.string Prefix,    System.string Suffix,    System.string Callout1,    System.string Callout2,    System.int TolType,    System.string TolMin,    System.string TolMax,    System.int TolPrec,    System.double ArrowSize,    System.int ArrowStyle,    System.int ArrowDir,    System.double WitnessGap,    System.double WitnessOvershoot,    System.bool DualDisplay,    System.int DualPrec ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.Object^ CreateLinearDim3(  &   System.Object^ P0, &   System.Object^ P1, &   System.Object^ P2, &   System.Object^ P3, &   System.Object^ P4, &   System.double Val, &   System.int PrimPrec, &   System.String^ Text, &   System.Object^ TextPoint, &   System.double Angle, &   System.double TextHeight, &   System.String^ Prefix, &   System.String^ Suffix, &   System.String^ Callout1, &   System.String^ Callout2, &   System.int TolType, &   System.String^ TolMin, &   System.String^ TolMax, &   System.int TolPrec, &   System.double ArrowSize, &   System.int ArrowStyle, &   System.int ArrowDir, &   System.double WitnessGap, &   System.double WitnessOvershoot, &   System.bool DualDisplay, &   System.int DualPrec ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*P0*
+
+*P1*
+
+*P2*
+
+*P3*
+
+*P4*
+
+*Val*
+
+*PrimPrec*
+
+*Text*
+
+*TextPoint*
+
+*Angle*
+
+*TextHeight*
+
+*Prefix*
+
+*Suffix*
+
+*Callout1*
+
+*Callout2*
+
+*TolType*
+
+*TolMin*
+
+*TolMax*
+
+*TolPrec*
+
+*ArrowSize*
+
+*ArrowStyle*
+
+*ArrowDir*
+
+*WitnessGap*
+
+*WitnessOvershoot*
+
+*DualDisplay*
+
+*DualPrec*
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See DrawingDoc::CreateLinearDim3.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IDrawingDoc Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc.html)
+
+[IDrawingDoc Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IDrawingDoc_members.html)

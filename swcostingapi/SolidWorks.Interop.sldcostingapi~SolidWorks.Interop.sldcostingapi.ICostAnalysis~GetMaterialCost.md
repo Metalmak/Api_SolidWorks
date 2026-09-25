@@ -1,0 +1,95 @@
+<!-- source: swcostingapi/SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis~GetMaterialCost.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Costing API Help | Send Feedback |
+| GetMaterialCost Method (ICostAnalysis) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldcostingapi Namespace](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi_namespace.html) > [ICostAnalysis Interface](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis.html) : GetMaterialCost Method (ICostAnalysis) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets the costs of the materials in this Costing analysis.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetMaterialCost() As System.Double ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICostAnalysis Dim value As System.Double   value = instance.GetMaterialCost() ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.double GetMaterialCost() ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.double GetMaterialCost(); ``` | |
+
+#### Return Value
+
+Costs of the materials
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CostAnalysis::GetMaterialCost.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Sheet Metal Costing Analysis (C#)](Create_Sheet_Metal_Costing_Analyses_Example_CSharp.htm)
+
+[Create Sheet Metal Costing Analysis (VB.NET)](Create_Sheet_Metal_Costing_Analyses_Example_VBNET.htm)
+
+[Create Sheet Metal Costing Analysis (VBA)](Create_Sheet_Metal_Costing_Analyses_Example_VB.htm)
+
+[Create Machining Costing Analysis (C#)](Create_Machining_Costing_Analyses_Example_CSharp.htm)
+
+[Create Machining Costing Analysis (VB.NET)](Create_Machining_Costing_Analyses_Example_VBNET.htm)
+
+[Create Machining Costing Analysis (VBA)](Create_Machining_Costing_Analyses_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICostAnalysis Interface](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis.html)
+
+[ICostAnalysis Members](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis_members.html)
+
+[ICostAnalysis::GetManufacturingCost Method ()](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis~GetManufacturingCost.html)
+
+[ICostAnalysis::GetSetupCost Method ()](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis~GetSetupCost.html)
+
+[ICostAnalysis::GetTotalCostToCharge Method ()](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis~GetTotalCostToCharge.html)
+
+[ICostAnalysis::GetTotalCostToManufacture Method ()](SolidWorks.Interop.sldcostingapi~SolidWorks.Interop.sldcostingapi.ICostAnalysis~GetTotalCostToManufacture.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS Costing API 2013 SP0

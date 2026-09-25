@@ -1,0 +1,89 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICommandGroup~Activate.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| Activate Method (ICommandGroup) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ICommandGroup Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICommandGroup.html) : Activate Method (ICommandGroup) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Activates the CommandGroup.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function Activate() As System.Boolean ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICommandGroup Dim value As System.Boolean   value = instance.Activate() ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.bool Activate() ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.bool Activate(); ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Return Value
+
+True if the CommandGroup is activated, false if not
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CommandGroup::Activate.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Flyouts in the CommandManager (C#)](Create_Flyouts_in_the_CommandManager_Example_CSharp.htm)
+
+[Create Flyouts in the CommandManager (VB.NET)](Create_Flyouts_in_the_CommandManager_Example_VBNET.htm)
+
+[Create Submenus in the CommandManager (C#)](Create_Submenus_in_the_CommandManager_Example_CSharp.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+After completely creating a CommandGroup, use this method to activate it. You only need to activate the top-level group; you do not need to activate child groups.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICommandGroup Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICommandGroup.html)
+
+[ICommandGroup Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICommandGroup_members.html)
+
+[ICommandGroup::MenuPosition Property](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICommandGroup~MenuPosition.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2006 FCS, Revision Number 14

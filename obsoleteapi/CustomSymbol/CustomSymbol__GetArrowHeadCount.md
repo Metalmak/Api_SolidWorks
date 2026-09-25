@@ -1,0 +1,26 @@
+<!-- source: obsoleteapi/CustomSymbol/CustomSymbol__GetArrowHeadCount.htm -->
+
+# CustomSymbol::GetArrowHeadCount
+
+This method is obsolete and has been superseded
+by Note::GetArrowHeadCount.
+
+Description
+
+This
+method gets the number of arrow heads in the custom symbol.
+
+Syntax (OLE Automation)
+
+retval
+= CustomSymbol.GetArrowHeadCount ()
+
+| Return: | (long) retval | Number of arrow heads |
+
+Syntax (COM)
+
+status
+= CustomSymbol->GetArrowHeadCount ( &retval )
+
+| Output: | (long) retval | Number of arrow heads |
+| Return: | (HRESULT) status | S\_OK if successful |

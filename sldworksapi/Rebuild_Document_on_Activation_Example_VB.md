@@ -1,0 +1,64 @@
+<!-- source: sldworksapi/Rebuild_Document_on_Activation_Example_VB.htm -->
+
+# SOLIDWORKS API Help
+
+# Rebuild a Document on Activation Example (VBA)
+
+This example shows how to activate and rebuild an assembly document.
+
+'----------------------------------------------------------------------------
+' Preconditions:
+' 1. Open an assembly.
+' 2. Replace *loaded\_document* with the assembly name.
+' 3. Right-click a part in the FeatureManager design tree.
+' 4. Select **Open Part** from the toolbar.
+' 5. Edit a feature in the part.
+' 6. Click **OK** in the PropertyManager to accept the changes.
+'
+' Postconditions:
+' 1. Displays a dialog.
+' 2. Click **Yes** to rebuild the assembly.
+' 3. Activates the assembly document.
+' 4. Inspect the Immediate Window.
+' ---------------------------------------------------------------------------
+
+Option Explicit
+
+Dim swApp As SldWorks.SldWorks
+Dim swModel As SldWorks.ModelDoc2
+Dim Errors As Long
+
+Sub main()
+
+    Dim bValue     As
+Boolean
+    Dim lValue     As Long
+    Dim nValue     As
+SwConst.swRebuildOnActivation\_e
+
+    Set swApp = Application.SldWorks
+
+   ' Set user preference to not rebuild on
+activation
+    bValue =
+swApp.**SetUserPreferenceIntegerValue**(swUserPreferenceIntegerValue\_e.swRebuildOnActivation,
+swRebuildOnActivation\_e.swDontRebuildActiveDoc)
+    Debug.Print ("Rebuild user preference set to not rebuild on
+activation: " & bValue)
+
+    nValue =
+swApp.**GetUserPreferenceIntegerValue**(swUserPreferenceIntegerValue\_e.swRebuildOnActivation)
+    Debug.Print ("swRebuildOnActivation\_e user preference is: " &
+nValue)
+
+    ' Ignore the user preference just set
+    Debug.Print ("Ignoring rebuild user preference.")
+
+    ' Activate the loaded document and prompt
+for rebuild if the model is changed
+    Set swModel = swApp.**ActivateDoc3**("*loaded\_document*",
+False, swRebuildOnActivation\_e.swUserDecision, Errors)
+    Debug.Print ("Error code after document activation: " &
+Errors)
+
+End Sub

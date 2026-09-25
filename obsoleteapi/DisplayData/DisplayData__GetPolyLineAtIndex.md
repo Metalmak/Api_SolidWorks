@@ -1,0 +1,43 @@
+<!-- source: obsoleteapi/DisplayData/DisplayData__GetPolyLineAtIndex.htm -->
+
+# DisplayData::GetPolyLineAtIndex
+
+This method is obsolete and has been superseded
+by DisplayData::GetPolyLineAtIndex2.
+
+Description
+
+This method gets the number of polylines in this display item.
+
+Syntax (OLE Automation)
+
+retval
+= DisplayData.GetPolyLineAtIndex ( index )
+
+| Input: | (long) index | Index of the desired line where the index begins at zero |
+| Return: | (VARIANT) retval | VARIANT of type SafeArray of doubles (see below) |
+
+Syntax (COM)
+
+status
+= DisplayData->GetPolyLineAtIndex ( index, retval )
+
+| Input: | (long) index | Index of the desired line where the index begins at zero |
+| Output: | (double\*) retval | Array of doubles (see below) |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks
+
+Format of return values is an array of doubles
+with the format:
+
+[
+Color, LineType, Unused, Unused, NumPolyPoints,
+[x,y,z] ]
+
+where the [x,y,z]
+parameter is an array of NumPolyPoints
+and LineType is the line type as defined in swLineTypes\_e.
+
+Use [DisplayData::GetPolyLineSizeAtIndex](DisplayData__GetPolyLineSizeAtIndex.htm)
+to determine the number of elements returned in this array.

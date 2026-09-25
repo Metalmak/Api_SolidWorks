@@ -1,0 +1,59 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__FeatureChamferType.htm -->
+
+# ModelDoc2::FeatureChamferType
+
+This method is obsolete and has been superseded
+by FeatureManager::InsertFeatureChamfer.
+
+Description
+
+This method creates a chamfer feature according to the type specified
+(angle-distance, distance-distance, or vertex chamfer).
+
+Syntax (OLE Automation)
+
+(void) ModelDoc2.FeatureChamferType
+( chamferType, width, angle, flip, otherDist, vertexChamDist1, vertexChamDist2,
+vertexChamDist3 )
+
+| Input: | (short) chamferType | Chamfer type as defined in swChamferType\_e |
+| Input: | (double) width | Width for angle-distance chamfers or one distance for distance-distance chamfers |
+| Input: | (double) angle | Angle for angle-distance chamfers |
+| Input: | (BOOL) flip | TRUE to flip the direction of the chamfer, FALSE to not |
+| Input: | (double) otherDist | Other distance for distance-distance chamfers |
+| Input: | (double) vertexChamDist1 | First distance for vertex chamfers |
+| Input: | (double) vertexChamDist2 | Second distance for vertex chamfers |
+| Input: | (double) vertexChamDist3 | Last distance for vertex chamfers |
+
+Syntax (COM)
+
+status = ModelDoc2->FeatureChamferType
+( chamferType, width, angle, flip, otherDist, vertexChamDist1, vertexChamDist2,
+vertexChamDist3 )
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (short) chamferType | Chamfer type as defined in swChamferType\_e |
+| Input: | (double) width | Width for angle-distance chamfers or one distance for distance-distance chamfers |
+| Input: | (double) angle | Angle for angle-distance chamfers |
+| Input: | (VARIANT\_BOOL) flip | TRUE to flip the direction of the chamfer, FALSE to not |
+| Input: | (double) otherDist | Other distance for distance-distance chamfers |
+| Input: | (double) vertexChamDist1 | First distance for vertex chamfers |
+| Input: | (double) vertexChamDist2 | Second distance for vertex chamfers |
+| Input: | (double) vertexChamDist3 | Last distance for vertex chamfers |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks
+
+Both angle-distance and distance-distance chamfers are edge chamfers.
+This means that all measurements are from edges. An angle-distance chamfer
+requires an angle and a distance; a distance-distance chamfer requires
+two distances for both sides of the chamfered edges.
+
+A vertex chamfer only works on a vertex with three adjacent edges of
+the same convexity. The distance values specified measure from the vertex
+along three adjacent edges. For non-linear edges, this value is an arc
+length value; it is not a chordal value.
+
+See Vertex::EnumEdgesOriented to determine the edge order used by this
+method.

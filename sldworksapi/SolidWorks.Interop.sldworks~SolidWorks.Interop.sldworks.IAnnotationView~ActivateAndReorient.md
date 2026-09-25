@@ -1,0 +1,87 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView~ActivateAndReorient.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ActivateAndReorient Method (IAnnotationView) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IAnnotationView Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView.html) : ActivateAndReorient Method (IAnnotationView) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Activates and reorients this annotation view.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function ActivateAndReorient() As System.Boolean ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IAnnotationView Dim value As System.Boolean   value = instance.ActivateAndReorient() ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.bool ActivateAndReorient() ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.bool ActivateAndReorient(); ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Return Value
+
+True if the annotation view is activated and reoriented, false if not
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See AnnotationView::ActivateAndReorient.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+The annotation view is oriented normal to its plane.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IAnnotationView Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView.html)
+
+[IAnnotationView Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView_members.html)
+
+[IAnnotationView::Activate Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView~Activate.html)
+
+[IAnnotationView::Orient Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView~Orient.html)
+
+[IAnnotationView::Hide Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView~Hide.html)
+
+[IAnnotationView::Show Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAnnotationView~Show.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2008 FCS, Revision Number 16.0

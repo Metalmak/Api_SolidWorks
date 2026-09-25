@@ -1,0 +1,161 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketch~SetWorkingPlaneOrientation.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| SetWorkingPlaneOrientation Method (ISketch) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ISketch Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketch.html) : SetWorkingPlaneOrientation Method (ISketch) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*OriginX*
+:   x coordinate of the origin of the axis
+
+*OriginY*
+:   y coordinate of the origin of the axis
+
+*OriginZ*
+:   z coordinate of the origin of the axis
+
+*XAxisX*
+:   x coordinate of the x vector direction
+
+*XAxisY*
+:   y coordinate of the x vector direction
+
+*XAxisZ*
+:   z coordinate of the x vector direction
+
+*YAxisX*
+:   x coordinate of the y vector direction
+
+*YAxisY*
+:   y coordinate of the y vector direction
+
+*YAxisZ*
+:   z coordinate of the y vector direction
+
+*NormalX*
+:   x coordinate of the normal to the planar direction
+
+*NormalY*
+:   y coordinate of the normal to the planar direction
+
+*NormalZ*
+:   z coordinate of the normal to the planar direction
+
+Sets the orientation for sketching geometry in a 3D sketch. It sets the planar location for new 2D and 3D geometry in a 3D sketch.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function SetWorkingPlaneOrientation( _    ByVal OriginX As System.Double, _    ByVal OriginY As System.Double, _    ByVal OriginZ As System.Double, _    ByVal XAxisX As System.Double, _    ByVal XAxisY As System.Double, _    ByVal XAxisZ As System.Double, _    ByVal YAxisX As System.Double, _    ByVal YAxisY As System.Double, _    ByVal YAxisZ As System.Double, _    ByVal NormalX As System.Double, _    ByVal NormalY As System.Double, _    ByVal NormalZ As System.Double _ ) As System.Boolean ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISketch Dim OriginX As System.Double Dim OriginY As System.Double Dim OriginZ As System.Double Dim XAxisX As System.Double Dim XAxisY As System.Double Dim XAxisZ As System.Double Dim YAxisX As System.Double Dim YAxisY As System.Double Dim YAxisZ As System.Double Dim NormalX As System.Double Dim NormalY As System.Double Dim NormalZ As System.Double Dim value As System.Boolean   value = instance.SetWorkingPlaneOrientation(OriginX, OriginY, OriginZ, XAxisX, XAxisY, XAxisZ, YAxisX, YAxisY, YAxisZ, NormalX, NormalY, NormalZ) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.bool SetWorkingPlaneOrientation(     System.double OriginX,    System.double OriginY,    System.double OriginZ,    System.double XAxisX,    System.double XAxisY,    System.double XAxisZ,    System.double YAxisX,    System.double YAxisY,    System.double YAxisZ,    System.double NormalX,    System.double NormalY,    System.double NormalZ ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.bool SetWorkingPlaneOrientation(  &   System.double OriginX, &   System.double OriginY, &   System.double OriginZ, &   System.double XAxisX, &   System.double XAxisY, &   System.double XAxisZ, &   System.double YAxisX, &   System.double YAxisY, &   System.double YAxisZ, &   System.double NormalX, &   System.double NormalY, &   System.double NormalZ ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*OriginX*
+:   x coordinate of the origin of the axis
+
+*OriginY*
+:   y coordinate of the origin of the axis
+
+*OriginZ*
+:   z coordinate of the origin of the axis
+
+*XAxisX*
+:   x coordinate of the x vector direction
+
+*XAxisY*
+:   y coordinate of the x vector direction
+
+*XAxisZ*
+:   z coordinate of the x vector direction
+
+*YAxisX*
+:   x coordinate of the y vector direction
+
+*YAxisY*
+:   y coordinate of the y vector direction
+
+*YAxisZ*
+:   z coordinate of the y vector direction
+
+*NormalX*
+:   x coordinate of the normal to the planar direction
+
+*NormalY*
+:   y coordinate of the normal to the planar direction
+
+*NormalZ*
+:   z coordinate of the normal to the planar direction
+
+#### Return Value
+
+True if the orientation is set, false if not
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Sketch::SetWorkingPlaneOrientation.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create 3D Sketch Plane (C#)](Create_3D_Sketch_Plane_Example_CSharp.htm)
+
+[Create 3D Sketch Plane (VB.NET)](Create_3D_Sketch_Plane_Example_VBNET.htm)
+
+[Create 3D Sketch Plane (VBA)](Create_3D_Sketch_Plane_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This method sets the planar location for new 2D and 3D geometry in a 3D sketch.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISketch Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketch.html)
+
+[ISketch Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketch_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2007 FCS, Revision Number 15.0

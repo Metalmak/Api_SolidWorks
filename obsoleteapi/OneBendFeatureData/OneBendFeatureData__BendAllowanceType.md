@@ -1,0 +1,45 @@
+<!-- source: obsoleteapi/OneBendFeatureData/OneBendFeatureData__BendAllowanceType.htm -->
+
+# OneBendFeatureData::BendAllowanceType
+
+This
+property is obsolete and has been superseded by OneBendFeatureData::GetCustomBendAllowance
+and OneBendFeatureData::SetCustomBendAllowance.
+
+Description
+
+This property gets or sets the bend-allowance
+type from this bend
+
+Syntax (OLE Automation)
+
+bendAllowanceType = OneBendFeatureData.BendAllowanceType  (
+VB Get Property )
+
+OneBendFeatureData.BendAllowanceType = bendAllowanceType  (
+VB Set Property )
+
+bendAllowanceType = OneBendFeatureData.GetBendAllowanceType (
+C++ Get Property )
+
+OneBendFeatureData.SetBendAllowanceType = bendAllowanceType
+ ( C++ Set Property )
+
+|  |  |  |
+| --- | --- | --- |
+| Return: | (long) bendAllowanceType | Bend-allowance type as defined in swBendAllowanceTypes\_e |
+
+Syntax (COM)
+
+status = OneBendFeatureData->get\_BendAllowanceType
+( &bendAllowanceType) ( COM Get Property )
+
+status = OneBendFeatureData->put\_BendAllowanceType
+( bendAllowanceType) ( COM Get Property )
+
+|  |  |  |
+| --- | --- | --- |
+| Output: | (long) bendAllowanceType | Bend-allowance type as defined in swBendAllowanceTypes\_e |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks

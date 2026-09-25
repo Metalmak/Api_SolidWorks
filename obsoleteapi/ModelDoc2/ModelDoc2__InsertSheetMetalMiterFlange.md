@@ -1,0 +1,52 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__InsertSheetMetalMiterFlange.htm -->
+
+# ModelDoc2::InsertSheetMetalMiterFlange
+
+This method is obsolete and has been superseded
+by FeatureManager::InsertSheetMetalMiterFlange.
+
+Description
+
+This method inserts a sheet metal miter flange
+into this model document.
+
+Syntax (OLE Automation)
+
+void ModelDoc2.InsertSheetMetalMiterFlange ( useReliefRatio,
+useDefaultGap, useAutoRelief, globalRadius, ripGap, autoReliefRatio, autoReliefWidth,
+autoReliefDepth, reliefType, ripLocation)
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (BOOL) useReliefRatio | TRUE to use the relief ratio value FALSE otherwise |
+| Input: | (BOOL) useDefaultGap | TRUE to use the default gap value FALSE otherwise |
+| Input: | (BOOL) useAutoRelief | TRUE to use auto relief FALSE otherwise |
+| Input: | (double) globalRadius | Value for the global radius |
+| Input: | (double) ripGap | Value for the rip-gap |
+| Input: | (double) autoReliefRatio | Value for the auto relief ratio |
+| Input: | (double) autoReliefWidth | Value for the auto relief width |
+| Input: | (double) autoReliefDepth | Value for the auto relief depth |
+| Input: | (long) reliefType | relief type; currently only supports 0 = Tear relief type |
+| Input: | (long) ripLocation | Value for the rip location:   * 0 = Start * 1 = End * 2 = Start   and end |
+
+Syntax (COM)
+
+status = ModelDoc2->InsertSheetMetalMiterFlange
+( useReliefRatio, useDefaultGap, useAutoRelief, globalRadius, ripGap,
+autoReliefRatio, autoReliefWidth, autoReliefDepth, reliefType, ripLocation)
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (VARIANT\_BOOL) useReliefRatio | TRUE to use the relief ratio value FALSE otherwise |
+| Input: | (VARIANT\_BOOL) useDefaultGap | TRUE to use the default gap value FALSE otherwise |
+| Input: | (VARIANT\_BOOL) useAutoRelief | TRUE to use auto relief FALSE otherwise |
+| Input: | (double) globalRadius | Value for the global radius |
+| Input: | (double) ripGap | Value for the rip-gap |
+| Input: | (double) autoReliefRatio | Value for the auto relief ratio |
+| Input: | (double) autoReliefWidth | Value for the auto relief width |
+| Input: | (double) autoReliefDepth | Value for the auto relief depth |
+| Input: | (long) reliefType | relief type; currently only supports 0 = Tear relief type |
+| Input: | (long) ripLocation | Value for the rip location:   * 0 = Start * 1 = End * 2 = Start   and end |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks

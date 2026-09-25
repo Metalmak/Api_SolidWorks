@@ -1,0 +1,117 @@
+<!-- source: swdimxpertapi/SolidWorks.Interop.swdimxpert~SolidWorks.Interop.swdimxpert.IDimXpertFlatnessTolerance~GetPerUnitArea.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS DimXpert API Help | Send comments on this topic. |
+| GetPerUnitArea Method (IDimXpertFlatnessTolerance) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swdimxpert Namespace](SolidWorks.Interop.swdimxpert~SolidWorks.Interop.swdimxpert_namespace.html) > [IDimXpertFlatnessTolerance Interface](SolidWorks.Interop.swdimxpert~SolidWorks.Interop.swdimxpert.IDimXpertFlatnessTolerance.html) : GetPerUnitArea Method (IDimXpertFlatnessTolerance) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*Enabled*
+:   True if enabled; false otherwise
+
+*Length*
+:   Length of the area
+
+*Width*
+:   Width of the area
+
+*I*
+:   I component of the unit vector
+
+*J*
+:   J component of the unit vector
+
+*K*
+:   K component of the unit vector
+
+Gets the per unit area for this flatness tolerance.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetPerUnitArea( _    ByRef Enabled As System.Boolean, _    ByRef Length As System.Double, _    ByRef Width As System.Double, _    ByRef I As System.Double, _    ByRef J As System.Double, _    ByRef K As System.Double _ ) As System.Boolean ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IDimXpertFlatnessTolerance Dim Enabled As System.Boolean Dim Length As System.Double Dim Width As System.Double Dim I As System.Double Dim J As System.Double Dim K As System.Double Dim value As System.Boolean   value = instance.GetPerUnitArea(Enabled, Length, Width, I, J, K) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.bool GetPerUnitArea(     out System.bool Enabled,    out System.double Length,    out System.double Width,    out System.double I,    out System.double J,    out System.double K ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.bool GetPerUnitArea(  &   [Out] System.bool Enabled, &   [Out] System.double Length, &   [Out] System.double Width, &   [Out] System.double I, &   [Out] System.double J, &   [Out] System.double K ) ``` | |
+
+#### Parameters
+
+*Enabled*
+:   True if enabled; false otherwise
+
+*Length*
+:   Length of the area
+
+*Width*
+:   Width of the area
+
+*I*
+:   I component of the unit vector
+
+*J*
+:   J component of the unit vector
+
+*K*
+:   K component of the unit vector
+
+#### Return Value
+
+True if the method call was successful; false otherwise
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See DimXpertFlatnessTolerance::GetPerUnitArea.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Get DimXpert Tolerance Example (VBA)](Get_DimXpert_Tolerance_Example_VB.htm)
+
+[Get DimXpert Tolerance Example (VB.NET)](Get_DimXpert_Tolerance_Example_VBNET.htm)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IDimXpertFlatnessTolerance Interface](SolidWorks.Interop.swdimxpert~SolidWorks.Interop.swdimxpert.IDimXpertFlatnessTolerance.html)
+
+[IDimXpertFlatnessTolerance Members](SolidWorks.Interop.swdimxpert~SolidWorks.Interop.swdimxpert.IDimXpertFlatnessTolerance_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2010 FCS, Revision Number 18.0

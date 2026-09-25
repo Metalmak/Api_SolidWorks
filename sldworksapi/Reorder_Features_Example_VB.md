@@ -1,0 +1,41 @@
+<!-- source: sldworksapi/Reorder_Features_Example_VB.htm -->
+
+# SOLIDWORKS API Help
+
+# Reorder Features Example (VBA)
+
+This example shows how to move a feature to another location in the
+FeatureManager design tree of a part.
+
+'---------------------------------------------------------------------------
+' Preconditions:
+' 1. Open *public\_documents***\samples\tutorial\api\clamp2.sldprt**.
+' 2. Open an Immediate window.
+'
+' Postconditions:
+' 1. **Fillet5** moves to the end of the FeatureManager design tree.
+' 2. Inspect the Immediate window.
+'
+' NOTE: Because the assembly document is used by elsewhere,
+' do not save any changes when closing the document.
+'---------------------------------------------------------------------------
+
+Option Explicit
+
+Dim swApp As SldWorks.SldWorks
+Dim modelDoc2 As SldWorks.modelDoc2
+Dim modelDocExt As SldWorks.ModelDocExtension
+Dim retVal As Boolean
+
+Sub Main()
+
+    Set swApp = Application.**SldWorks**
+    Set modelDoc2 = swApp.**ActiveDoc**
+    Set modelDocExt = modelDoc2.**Extension**
+
+    retVal = modelDocExt.**ReorderFeature**("Fillet5",
+"", swMoveToEnd)
+    Debug.Print "Fillet5 moved to the end of the FeatureManager
+design tree? " & retVal
+
+End Sub

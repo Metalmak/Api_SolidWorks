@@ -1,0 +1,995 @@
+<!-- source: swdimxpertapi/Get_DimXpert_Intersect_Features_Example_VBNET.htm -->
+
+# SOLIDWORKS API Help
+
+# Get DimXpert Intersect Features Example (VB.NET)
+
+This example shows how to build a part and get attributes
+for the following DimXpert features:
+
+   \*
+ Intersect
+Point
+
+   \*
+ Intersect
+Line
+
+   \*
+ Intersect
+Circle
+
+   \*
+ Intersect
+Plane
+
+'---------------------------------------------------------------------------
+
+' Preconditions:
+
+' 1.
+Open *public\_documents*\samples\tutorial\api\face\_plate\_ads\_geo.sldprt.
+
+'
+2.
+Open the DimXpert toolbar from **View > Toolbars**.
+
+'
+3.
+Create an Intersect Point DimXpert Feature:
+
+'
+   a.
+Click **Location Dimension** on the DimXpert toolbar.
+
+'
+   b.
+Select the front face of the part.
+
+'
+   c. Select **Create Intersection Point** on the DimXpert
+shorcut menu.
+
+'
+   d.
+Select a cylinder whose axis intersects the first face at a point.
+
+'
+   e.
+Click the green check mark in the shortcut menu to create the
+
+'       intersect
+point.
+
+'
+   f.
+Select a feature on the part to dimension against the intersect point.
+
+'
+   g.
+Click to position the dimension in the view.
+
+'
+   h.
+Observe the new DimXpert feature on the DimXpertManager tab:
+
+'       **Intersect
+Point1**
+
+'
+4.
+Create an Intersect Line DimXpert Feature:
+
+'
+   a.
+Click **Location Dimension** on the DimXpert toolbar.
+
+'
+   b.
+Select the front face of the part.
+
+'
+   c. Select **Create Intersection Line** from the DimXpert
+shortcut menu.
+
+'
+   d.
+Select a perpendicular plane that would intersect the first plane
+
+'       if extended
+(e.g., a top or side face of the part).
+
+'
+   e.
+Click the green check mark in the shortcut menu to create the
+
+'       intersect
+line.
+
+'
+   f.
+Select a feature on the part to dimension against the intersect line.
+
+'
+   g.
+Click to position the dimension in the view.
+
+'
+   h.
+Observe the new DimXpert feature on the DimXpertManager tab:
+
+'
+**Intersect
+Line1**
+
+'
+5.
+Create an Intersect Circle DimXpert Feature:
+
+'
+   a.
+Click **Size Dimension** on the DimXpert toolbar.
+
+'
+   b.
+Select the front face of the part.
+
+'
+   c. Select **Intersect Circle** from the DimXpert
+shortcut menu.
+
+'
+   d.
+Select the opening conical surface of a flat head machine screw
+
+'      (**LPattern1**
+or **LPattern3**) in the part.
+
+'
+   e.
+Click the green check mark in the shortcut menu to finish the dimension.
+
+'
+   f.
+Click to position the size dimension in the view.
+
+'
+   g.
+Observe the new DimXpert feature on the DimXpertManager tab:
+
+'
+**Intersect
+Circle1**
+
+'
+6.
+Create an Intersect Plane DimXpert Feature:
+
+'
+   a. Click **Location Dimension** on the DimXpert toolbar.
+
+'
+   b.
+Zoom in on a flat head machine screw (**LPattern1** or **LPattern3**).
+
+'
+   c.
+Select the opening conical surface of a flat head machine screw
+
+'       in the
+part.
+
+'
+   d.
+Select **Intersect Plane** from the DimXpert shortcut menu.
+
+'
+   e.
+Select the inner cylindrical bore face of the flat head machine screw.
+
+'
+   f.
+Click the green check mark in the shortcut menu to create the
+
+'       intersect
+plane.
+
+'
+   g.
+Select the top face of one of the extruded entities.
+
+'
+   h.
+Click to position the location dimension in the view.
+
+'
+   i.
+Observe the new DimXpert feature on the DimXpertManager tab:
+
+'
+**Intersect
+Plane1**
+
+'
+7.
+Open an Immediate window.
+
+'
+8.
+Ensure that the latest SolidWorks.Interop.swdimxpert.dll
+interop
+
+'    assembly is loaded (right-click
+project in Project Explorer and
+
+'    click **Add Reference** > .**NET** tab).
+
+'
+
+'
+Postconditions: Compare
+the output in the Immediate Window
+
+' with the features displayed on the DimXpertManager tab of the Management Panel.
+
+'
+
+'
+NOTE:
+Because this part is used elsewhere, do not save changes.
+
+'----------------------------------------------------------------------------
+
+Imports SolidWorks.Interop.sldworks
+
+Imports SolidWorks.Interop.swdimxpert
+
+Imports SolidWorks.Interop.swconst
+
+Imports System
+
+Imports System.Diagnostics
+
+Partial Class SolidWorksMacro
+
+    Dim
+swModel As IModelDoc2
+
+    Dim
+swModelDocExt As IModelDocExtension
+
+    Dim
+swSelMgr As ISelectionMgr
+
+    Dim
+swConfig As IConfiguration
+
+    Dim
+swFeature As IFeature
+
+    Dim
+swAnn As IFeature
+
+    Dim
+swSchema As IDimXpertManager
+
+    Dim
+swDXPart As IDimXpertPart
+
+    Dim
+featureType As swDimXpertFeatureType\_e
+
+    Dim
+features As Object
+
+    Dim
+appliedFeatures As Object
+
+    Dim
+appliedAnnotations As Object
+
+    Dim
+appliedAnnotation As IDimXpertAnnotation
+
+    Dim
+feature As IDimXpertFeature
+
+    Dim
+feature1 As IDimXpertFeature
+
+    Dim
+feature2 As IDimXpertFeature
+
+    Dim
+appliedFeature As IDimXpertFeature
+
+    Dim
+msgStr As String
+
+    Dim
+msgStr2 As String
+
+    Dim
+msgStr3 As String
+
+    Dim
+msgStr4 As String
+
+    Dim
+n As Long
+
+    Dim
+o As Long
+
+    Dim
+p As Long
+
+    Dim
+x As Double
+
+    Dim
+y As Double
+
+    Dim
+z As Double
+
+    Dim
+i As Double
+
+    Dim
+j As Double
+
+    Dim
+k As Double
+
+    Dim
+radius As Double
+
+    Dim
+boolstatus As Boolean
+
+    Sub
+main()
+
+        swModel
+= swApp.**ActiveDoc**
+
+        swModelDocExt
+= swModel.**Extension**
+
+        swSelMgr
+= swModel.**SelectionManager**
+
+        '
+Get the default DimXpert schema using IModelDocExtension.DimXpertManager()
+
+        swSchema
+= swModelDocExt.**DimXpertManager**("Default", True)
+
+        '
+Get IDimXpertPart from the IDimXpertManager
+
+        swDXPart
+= swSchema.**DimXpertPart**
+
+        Dim
+featCount As Long
+
+        featCount
+= swDXPart.**GetFeatureCount**
+
+        msgStr
+= "Total of "
+
+        msgStr2
+= featCount
+
+        msgStr
+= msgStr + msgStr2 + " DimXpert features in " + (swSchema.**SchemaName**)
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        '
+Get IDimXpert features through IDimXpertPart
+
+        features
+= swDXPart.**GetFeatures**
+
+        msgStr
+= (swSchema.**SchemaName**) + " has the following features: "
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        For
+n = 0 To UBound(features)
+
+            feature
+= features(n)
+
+            Debug.Print("
+ "
++ "Feature name: " + (feature.**Name**))
+
+            featureType
+= feature.**Type**
+
+            Call
+GetPatternType(featureType, msgStr2)
+
+            msgStr
+= "     Feature
+type "
+
+            msgStr3
+= " is suppressed on the DimXpertManager tab? "
+
+            msgStr4
+= feature.**IsSuppressed**()
+
+            Debug.Print(msgStr
++ msgStr2 + msgStr3 + msgStr4)
+
+            msgStr
+= "     "
++ "Model feature: "
+
+            swFeature
+= feature.**GetModelFeature**()
+
+            If
+Not (swFeature Is Nothing) Then
+
+                msgStr2
+= swFeature.**GetTypeName2**()
+
+                Debug.Print(msgStr
++ msgStr2)
+
+            End
+If
+
+            msgStr
+= "     "
++ "Number of SOLIDWORKS face entities in this feature: "
+
+            msgStr2
+= feature.**GetFaceCount**
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "     "
++ "Number of applied features: "
+
+            msgStr2
+= feature.**GetAppliedFeatureCount**()
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            appliedFeatures
+= feature.**GetAppliedFeatures**()
+
+            If
+Not (IsNothing(appliedFeatures)) Then
+
+                For
+o = 0 To UBound(appliedFeatures)
+
+                    appliedFeature
+= appliedFeatures(o)
+
+                    Debug.Print("
+       "
++ "Applied feature name: " + (appliedFeature.**Name**))
+
+                Next
+
+            End
+If
+
+            msgStr
+= "     "
++ "Number of applied annotations: "
+
+            msgStr2
+= feature.**GetAppliedAnnotationCount**()
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            appliedAnnotations
+= feature.**GetAppliedAnnotations**()
+
+            If
+Not (IsNothing(appliedAnnotations)) Then
+
+                For
+p = 0 To UBound(appliedAnnotations)
+
+                    appliedAnnotation
+= appliedAnnotations(p)
+
+                    Debug.Print("
+       "
++ "Applied annotation name: " + (appliedAnnotation.**Name**))
+
+                Next
+
+            End
+If
+
+            Debug.Print("
+    ")
+
+        Next
+
+        '
+If you know the name of a DimXpert feature, you can get it directly using
+IDimXpertPart.GetFeature("name"),
+
+        '
+which can return a general IDimXpertFeature or a more specific interface
+on the feature
+
+        '
+Get IDimXpertIntersectCircleFeature
+for the Intersect Circle1 feature
+
+        Dim
+iCircleFeature As IDimXpertIntersectCircleFeature
+
+        iCircleFeature
+= swDXPart.**GetFeature**("Intersect Circle1")
+
+        msgStr
+= iCircleFeature.Name + "
+is a DimXpert intersect circle feature"
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        '
+Get the nominal circle parameters
+
+        boolstatus
+= iCircleFeature.GetNominalCircle(radius,
+x, y, z, i, j, k)
+
+        If
+boolstatus Then
+
+            msgStr
+= "   The
+nominal circle has the following parameters:"
+
+            Debug.Print(msgStr)
+
+            msgStr
+= "      Radius
+is "
+
+            msgStr2
+= radius
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      x-coordinate
+is "
+
+            msgStr2
+= x
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      y-coordinate
+is "
+
+            msgStr2
+= y
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      z-coordinate
+is "
+
+            msgStr2
+= z
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      i-component
+of pierce vector is "
+
+            msgStr2
+= i
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      j-component
+of pierce vector is "
+
+            msgStr2
+= j
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      k-component
+of pierce vector is "
+
+            msgStr2
+= k
+
+            Debug.Print(msgStr
++ msgStr2)
+
+        End
+If
+
+        '
+Get IDimXpertIntersectLineFeature
+for the Intersect Line1 feature
+
+        Dim
+iLineFeature As IDimXpertIntersectLineFeature
+
+        iLineFeature
+= swDXPart.**GetFeature**("Intersect Line1")
+
+        msgStr
+= iLineFeature.Name + " is
+a DimXpert intersect line feature"
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        '
+Get the nominal line parameters
+
+        boolstatus
+= iLineFeature.GetNominalLine(x,
+y, z, i, j, k)
+
+        If
+boolstatus Then
+
+            msgStr
+= "   The
+nominal line has the following parameters:"
+
+            Debug.Print(msgStr)
+
+            msgStr
+= "      x-coordinate
+is "
+
+            msgStr2
+= x
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      y-coordinate
+is "
+
+            msgStr2
+= y
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      z-coordinate
+is "
+
+            msgStr2
+= z
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      i-component
+of pierce vector is "
+
+            msgStr2
+= i
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      j-component
+of pierce vector is "
+
+            msgStr2
+= j
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      k-component
+of pierce vector is "
+
+            msgStr2
+= k
+
+            Debug.Print(msgStr
++ msgStr2)
+
+        End
+If
+
+        '
+Get IDimXpertIntersectPlaneFeature
+for the Intersect Plane1 feature
+
+        Dim
+iPlaneFeature As IDimXpertIntersectPlaneFeature
+
+        iPlaneFeature
+= swDXPart.GetFeature("Intersect Plane1")
+
+        msgStr
+= iPlaneFeature.Name + "
+is a DimXpert intersect plane feature"
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        '
+Get the two features used to construct the intersect plane
+
+        boolstatus
+= iPlaneFeature.GetFeatures(feature1,
+feature2)
+
+        msgStr
+= "   The
+plane intersects the following DimXpert features:"
+
+        Debug.Print(msgStr)
+
+        msgStr
+= "      Feature1
+is "
+
+        msgStr2
+= feature1.Name
+
+        Debug.Print(msgStr
++ msgStr2)
+
+        msgStr
+= "      Feature2
+is "
+
+        msgStr2
+= feature2.**Name**
+
+        Debug.Print(msgStr
++ msgStr2)
+
+        '
+Get IDimXpertIntersectPointFeature
+for the Intersect Point1 feature
+
+        Dim
+iPointFeature As IDimXpertIntersectPointFeature
+
+        iPointFeature
+= swDXPart.**GetFeature**("Intersect Point1")
+
+        msgStr
+= iPointFeature.Name + "
+is a DimXpert intersect point feature"
+
+        Debug.Print("")
+
+        Debug.Print(msgStr)
+
+        '
+Get the nominal point
+
+        boolstatus
+= iPointFeature.GetNominalPoint(x,
+y, z)
+
+        If
+boolstatus Then
+
+            msgStr
+= "   The
+nominal point has the following parameters:"
+
+            Debug.Print(msgStr)
+
+            msgStr
+= "      x-coordinate
+is "
+
+            msgStr2
+= x
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      y-coordinate
+is "
+
+            msgStr2
+= y
+
+            Debug.Print(msgStr
++ msgStr2)
+
+            msgStr
+= "      z-coordinate
+is "
+
+            msgStr2
+= z
+
+            Debug.Print(msgStr
++ msgStr2)
+
+        End
+If
+
+    End
+Sub
+
+    Public
+Sub GetPatternType(ByRef featureType As swDimXpertFeatureType\_e,
+ByRef msgStr2 As String)
+
+        If
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Plane) Then
+
+            msgStr2
+= "Plane"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Cylinder) Then
+
+            msgStr2
+= "Cylinder"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Cone) Then
+
+            msgStr2
+= "Cone"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Extrude) Then
+
+            msgStr2
+= "Extrude"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Fillet) Then
+
+            msgStr2
+= "Fillet"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Chamfer) Then
+
+            msgStr2
+= "Chamfer"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_CompoundHole)
+Then
+
+            msgStr2
+= "CompoundHole"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_CompoundWidth)
+Then
+
+            msgStr2
+= "CompoundWidth"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_CompoundNotch)
+Then
+
+            msgStr2
+= "CompoundNotch"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_CompoundClosedSlot3D)
+Then
+
+            msgStr2
+= "CompoundClosedSlot3D"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_IntersectPoint)
+Then
+
+            msgStr2
+= "IntersectPoint"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_IntersectLine)
+Then
+
+            msgStr2
+= "IntersectLine"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_IntersectCircle)
+Then
+
+            msgStr2
+= "IntersectCircle"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_IntersectPlane)
+Then
+
+            msgStr2
+= "IntersectPlane"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Pattern) Then
+
+            msgStr2
+= "Pattern"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Sphere) Then
+
+            msgStr2
+= "Sphere"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_BestfitPlane)
+Then
+
+            msgStr2
+= "Bestfit Plane"
+
+        ElseIf
+(featureType = swDimXpertFeatureType\_e.swDimXpertFeature\_Surface) Then
+
+            msgStr2
+= "Surface"
+
+        End
+If
+
+    End
+Sub
+
+    Public
+swApp As SldWorks
+
+End Class

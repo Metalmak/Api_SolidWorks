@@ -1,0 +1,2536 @@
+<!-- source: swdimxpertapi/Get_DimXpert_Tolerance_Example_VBNET.htm -->
+
+# 89SOLIDWORKS API Help
+
+# Get DimXpert Tolerance Example (VB.NET)
+
+This example shows how to build a part and get attributes
+for the following DimXpert annotations:
+
+   \*
+ Counterbore
+dimension tolerance
+
+   \*
+ Depth dimension
+tolerance
+
+'---------------------------------------------------------------------------
+
+' Preconditions:
+
+'  1.
+Open *public\_documents*\samples\tutorial\api\face\_plate\_ads\_geo.sldprt.
+
+'  2.
+Open the DimXpert toolbar from **View > Toolbars**.
+
+'  3. Click **Auto Dimension Scheme** on the DimXpert toolbar.
+
+'  4.
+Ensure that all feature filters are selected.
+
+'  5.
+Click the green check mark to accept the settings.
+
+'  6.
+In the DimXpertManager tab of the Management Panel,
+
+'     expand the Hole Pattern8
+node in the DimXpertManager tab of the
+
+'     Management Panel.
+
+'  7.
+Observe the following Dimxpert annotations:  Counterbore3
+and
+Depth3
+
+'  8.
+Open an Immediate window.
+
+'  9.
+Ensure that the latest SolidWorks.Interop.swdimxpert.dll
+interop assembly
+
+'     is loaded (right-click the project in
+Project Explorer and
+
+'     click **Add Reference >**
+.NET tab).
+
+'  10.
+Ensure that the Microsoft Scripting Runtime library is loaded
+
+'     (right-click the project in Project Explorer
+and click **Add Reference >**
+
+'
+COM tab).
+
+'
+
+' Postconditions:
+
+'  1.
+Writes the output to c:\temp\dimXpertInfo.txt.
+
+'  2. Inspect
+the Immediate Window.
+
+'
+
+' NOTE:
+Because these parts are used elsewhere, do not save changes.
+
+'--------------------------------------------------------------------------
+
+Imports SolidWorks.Interop.sldworks
+
+Imports SolidWorks.Interop.swdimxpert
+
+Imports SolidWorks.Interop.swconst
+
+Imports System
+
+Imports System.Diagnostics
+
+Imports Scripting
+
+Partial Class SolidWorksMacro
+
+    Dim
+strs As New Collection
+
+    Dim
+boolstatus As Boolean
+
+    Dim
+dimXpertPart As DimXpertPart
+
+    Dim
+i As Double
+
+    Dim
+j As Double
+
+    Dim
+k As Double
+
+    Sub
+Main()
+
+        Dim
+swModelDoc As IModelDoc2
+
+        swModelDoc
+= swApp.ActiveDoc
+
+        If
+swModelDoc Is Nothing Then
+
+            Exit
+Sub
+
+        End
+If
+
+        Dim
+fso As New Scripting.FileSystemObject()
+
+        Dim
+f As Scripting.File
+
+        Dim
+textStr As Scripting.TextStream
+
+        textStr
+= fso.CreateTextFile("c:\temp\dimXpertInfo.txt")
+
+        f
+= fso.GetFile("c:\temp\dimXpertInfo.txt")
+
+        'textStr
+= f.OpenAsTextStream(2, -2)
+
+        If
+textStr Is Nothing Then
+
+            Debug.Print("Error
+creating temp file.")
+
+            Exit
+Sub
+
+        End
+If
+
+        Call
+log("Starting DimXpert log...", textStr)
+
+        Call
+retrieve\_info\_text(swApp, textStr)
+
+        textStr.Close()
+
+    End
+Sub
+
+    Private
+Sub log(ByVal text As String, ByVal textStr As Scripting.TextStream)
+
+        Debug.Print(text)
+
+        textStr.WriteLine(text)
+
+    End
+Sub
+
+    Private
+Sub retrieve\_info\_text(ByVal swapp As SldWorks, ByVal textStr As TextStream)
+
+        Dim
+dimXpertMgr As SolidWorks.Interop.sldworks.DimXpertManager
+
+        dimXpertMgr
+= swapp.IActiveDoc2.Extension.DimXpertManager(swapp.IActiveDoc2.IGetActiveConfiguration().Name,
+True)
+
+        Call
+log("Model: " & swapp.IActiveDoc2.GetPathName, textStr)
+
+        Dim
+dimXpertPartObj As DimXpertPart
+
+        dimXpertPartObj
+= dimXpertMgr.DimXpertPart
+
+        dimXpertPart
+= dimXpertPartObj
+
+        Dim
+vAnnotations As Object
+
+        vAnnotations
+= dimXpertPart.GetAnnotations()
+
+        Call
+log("------------------------", textStr)
+
+        Call
+log("Annotations...", textStr)
+
+        Call
+log("------------------------", textStr)
+
+        Dim
+annotationTemp As DimXpertAnnotation
+
+        Dim
+annotationIndex As Long
+
+        For
+annotationIndex = 0 To UBound(vAnnotations)
+
+            annotationTemp
+= vAnnotations(annotationIndex)
+
+            Dim
+AnnotationDataText As Collection
+
+            AnnotationDataText
+= AnnotationData(annotationTemp)
+
+            Dim
+annotationTextIndex As Long
+
+            For
+annotationTextIndex = 1 To AnnotationDataText.Count
+
+                Call
+log(AnnotationDataText(annotationTextIndex), textStr)
+
+            Next
+
+        Next
+
+    End
+Sub
+
+    Public
+Function AnnotationData(ByVal annotation As DimXpertAnnotation) As Collection
+
+        Dim
+annoType As Long
+
+        'general
+info
+
+        Call
+GeneralInfo(annotation)
+
+        annoType
+= annotation.Type
+
+        If
+annoType = swDimXpertAnnotationType\_e.swDimXpertDatum Then
+
+            Call
+DatumData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Position Then
+
+            Call
+PositionData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositePosition
+Then
+
+            Call
+CompositePositionData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Symmetry Then
+
+            Call
+SymmetryData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Concentricity Then
+
+            Call
+ConcentricityData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_LineProfile Then
+
+            Call
+LineProfileData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositeLineProfile
+Then
+
+            Call
+CompositeLineProfileData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_SurfaceProfile
+Then
+
+            Call
+SurfaceProfileData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositeSurfaceProfile
+Then
+
+            Call
+CompositeSurfaceProfileData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Angularity Or annoType
+= swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Parallelism Or annoType
+= swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Perpendicularity Then
+
+            Call
+OrientationData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_TotalRunout Then
+
+            Call
+TotalRunoutData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CircularRunout
+Then
+
+            Call
+CircularRunoutData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Flatness Then
+
+            Call
+FlatnessData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Circularity Then
+
+            Call
+CircularityData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Cylindricity Then
+
+            Call
+CylindricityData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Straightness Then
+
+            Call
+StraightnessData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Tangency Then
+
+            Call
+TangencyData(annotation)
+
+        Else
+   '
+any of the dimension tolerance types
+
+            Call
+DimensionToleranceData(annotation)
+
+        End
+If
+
+        AnnotationData
+= strs
+
+    End
+Function
+
+    Private
+Sub Clear(ByVal strs As Collection)
+
+        strs.Remove(strs.Count)
+
+        If
+Not strs.Count = 0 Then
+
+            Call
+Clear(strs)
+
+        End
+If
+
+    End
+Sub
+
+    Private
+Sub GeneralInfo(ByVal annotation As DimXpertAnnotation)
+
+        Dim
+annoType As String
+
+        Dim
+modelObj As Feature
+
+        If
+Not strs.Count = 0 Then
+
+            Call
+Clear(strs)
+
+        End
+If
+
+        strs.Add("")
+
+        strs.Add("Name:
+" + annotation.Name)
+
+        annoType
+= annotationTypeNameFromObject(annotation)
+
+        strs.Add("Type:
+" + annoType)
+
+        strs.Add("Display
+Entity: " + DisplayEntity(annotation))
+
+        modelObj
+= annotation.GetModelFeature()
+
+        If
+Not (modelObj Is Nothing) Then
+
+            strs.Add("ModelFeature:
+" + modelObj.Name + " (" + modelObj.GetTypeName2() + ")")
+
+        End
+If
+
+    End
+Sub
+
+    Private
+Sub DatumData(ByVal annotation As DimXpertDatum)
+
+        '
+the datum letter
+
+        strs.Add("")
+
+        strs.Add("Datum
+Letter:  "
++ annotation.Identifier)
+
+    End
+Sub
+
+    Private
+Sub PositionData(ByVal annotation As DimXpertPositionTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+enabled As Boolean, value As Double
+
+        Dim
+boolstatus As Boolean
+
+        strs.Add("")
+
+        strs.Add("Position
+Tolerance Compartment:")
+
+        '
+the shape of the tolerance zone
+
+        strs.Add("
+ Zone Type:
+" + PositionZoneType(annotation.ZoneType))
+
+        '
+the zone vector if the tolerance zone is planar
+
+        If
+annotation.ZoneType = swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_PlanarPosition
+Then
+
+            boolstatus
+= annotation.GetPlanarZoneVector(I, J, K)
+
+            strs.Add("
+ Direction:
+" + FormatVector(I, J, K))
+
+        End
+If
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the material condition modifer applied to feature
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+        '
+the projected tolerance zone when specified
+
+        boolstatus
+= annotation.GetProjectedZone(enabled, value)
+
+        Call
+FormatProjectedZone(enabled, value)
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub CompositePositionData(ByVal annotation As DimXpertCompositePositionTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+enabled As Boolean, value As Double
+
+        Dim
+boolstatus As Boolean
+
+        strs.Add("")
+
+        strs.Add("Composite
+Position Tolerance Compartment")
+
+        '
+the shape of the tolerance zone
+
+        strs.Add("
+ Zone Type:
+" + PositionZoneType(annotation.ZoneType))
+
+        '
+the zone vector when the zone is planar
+
+        If
+annotation.ZoneType = swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_PlanarPosition
+Then
+
+            boolstatus
+= annotation.GetPlanarZoneVector(I, J, K)
+
+            strs.Add("
+ Direction:
+" + FormatVector(I, J, K))
+
+        End
+If
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the material condition modifer
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+        '
+the projected tolerance zone when specified
+
+        boolstatus
+= annotation.GetProjectedZone(enabled, value)
+
+        Call
+FormatProjectedZone(enabled, value)
+
+        '
+the datum reference frame for the pattern location
+
+        Call
+DatumsStr(annotation)
+
+        '
+the datum reference frame for the feature to feature location
+
+        strs.Add("Composite
+datums:")
+
+        strs.Add("
+ Repeat
+Primary: " + IIf(annotation.PrimaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Secondary: " + IIf(annotation.SecondaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Tertiary: " + IIf(annotation.TertiaryInLowerTier, "True",
+"False"))
+
+    End
+Sub
+
+    Private
+Sub SymmetryData(ByVal annotation As DimXpertSymmetryTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+boolstatus As Boolean
+
+        strs.Add("")
+
+        strs.Add("Symmetry
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the material condition modifer applied to feature
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+        '
+the datum reference frame
+
+        strs.Add("")
+
+        Call
+DatumsStr(annotation)
+
+        '
+the direction of the planar zone
+
+        strs.Add("")
+
+        boolstatus
+= annotation.GetZoneDirection(I, J, K)
+
+        strs.Add("Planar
+Zone Direction: " + FormatVector(I, J, K))
+
+    End
+Sub
+
+    Private
+Sub ConcentricityData(ByVal annotation As DimXpertConcentricityTolerance)
+
+        strs.Add("")
+
+        strs.Add("Concentricity
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the material condition modifer applied to feature
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub TotalRunoutData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Total
+Runout Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub CircularRunoutData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Ciircular
+Runout Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub LineProfileData(ByVal annotation As DimXpertLineProfileTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+boolstatus As Boolean
+
+        strs.Add("")
+
+        strs.Add("Line
+Profile Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the outer (outside material) tolerance value
+
+        strs.Add("
+ Outer Tolerance:
+" + FormatDouble(annotation.OuterToleranceValue))
+
+        '
+the vector normal to the profile zones
+
+        strs.Add("")
+
+        boolstatus
+= annotation.GetPlanarZoneVector(I, J, K)
+
+        strs.Add("Planar
+Zone Vector: " + FormatVector(I, J, K))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub CompositeLineProfileData(ByVal annotation As DimXpertCompositeLineProfileTolerance)
+
+        strs.Add("")
+
+        strs.Add("Composite
+Line Profile Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the outer (outside material) tolerance value
+
+        strs.Add("
+ Outer Tolerance:
+" + FormatDouble(annotation.OuterToleranceValue))
+
+        '
+the vector normal to the profile zones
+
+        strs.Add("")
+
+        boolstatus
+= annotation.GetPlanarZoneVector(i, j, k)
+
+        strs.Add("Planar
+Zone Vector: " + FormatVector(i, j, k))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+        '
+the datum reference frame for the orientation and form
+
+        strs.Add("Composite
+Datums:")
+
+        strs.Add("
+ Repeat
+Primary: " + IIf(annotation.PrimaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Secondary: " + IIf(annotation.SecondaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Tertiary: " + IIf(annotation.TertiaryInLowerTier, "True",
+"False"))
+
+    End
+Sub
+
+    Private
+Sub SurfaceProfileData(ByVal annotation As DimXpertSurfaceProfileTolerance)
+
+        strs.Add("")
+
+        strs.Add("Surface
+Profile Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the outer (outside material) tolerance value
+
+        strs.Add("
+ Outer Tolerance:
+" + FormatDouble(annotation.OuterToleranceValue))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub CompositeSurfaceProfileData(ByVal annotation As DimXpertCompositeSurfaceProfileTolerance)
+
+        strs.Add("")
+
+        strs.Add("Composite
+Surface Profile Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance
+Upper Tier: " + FormatDouble(annotation.Tolerance))
+
+        '
+the outer tolerance value
+
+        strs.Add("
+ Outer Tolerance
+Upper Tier: " + FormatDouble(annotation.OuterToleranceValue))
+
+        '
+the datum reference frame for the location
+
+        Call
+DatumsStr(annotation)
+
+        '
+the datum reference frame for the orientation and form
+
+        strs.Add("Composite
+Datums:")
+
+        strs.Add("
+ Repeat
+Primary: " + IIf(annotation.PrimaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Secondary: " + IIf(annotation.SecondaryInLowerTier, "True",
+"False"))
+
+        strs.Add("
+ Repeat
+Tertiary: " + IIf(annotation.TertiaryInLowerTier, "True",
+"False"))
+
+    End
+Sub
+
+    Private
+Sub OrientationData(ByVal annotation As DimXpertOrientationTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+enabled As Boolean, value As Double
+
+        Dim
+annoType As Long
+
+        annoType
+= annotation.Type
+
+        '
+the type or orientation tolerance
+
+        If
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Perpendicularity
+Then
+
+            strs.Add("Orientation
+Type:  Perpendicularity")
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Parallelism Then
+
+            strs.Add("Orientation
+Type:  Parallelism")
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Angularity Then
+
+            strs.Add("Orientation
+Type:  Angularity")
+
+        End
+If
+
+        strs.Add("")
+
+        strs.Add("Orientation
+Tolerance Compartment:")
+
+        '
+the shape of the tolerance zone
+
+        Select
+Case annotation.ZoneType
+
+            Case
+swDimXpertOrientationZoneType\_e.swDimXpertOrientationZoneType\_Cylindrical
+
+                strs.Add("
+ Zone Type:
+Cylindrical")
+
+            Case
+swDimXpertOrientationZoneType\_e.swDimXpertOrientationZoneType\_Planar
+
+                strs.Add("
+ Zone Type:
+Planar")
+
+                boolstatus
+= annotation.GetPlanarZoneVector(I, J, K)
+
+                strs.Add("Planar
+Zone Vector: " + FormatVector(I, J, K))
+
+        End
+Select
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        'material
+condition modifer applied to feature
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+        '
+the projected tolerance zone when specified
+
+        boolstatus
+= annotation.GetProjectedZone(enabled, value)
+
+        Call
+FormatProjectedZone(enabled, value)
+
+        '
+is tangent plane
+
+        strs.Add("
+ IsTangentPlane:
+" + IIf(annotation.IsTangentPlane, "True", "False"))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub FlatnessData(ByVal annotation As DimXpertFlatnessTolerance)
+
+        Dim
+enabled As Boolean
+
+        Dim
+length As Double, width As Double
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+boolstatus As Boolean
+
+        strs.Add("")
+
+        strs.Add("Flatness
+Tolerance Compartment:")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the per unit area data
+
+        boolstatus
+= annotation.GetPerUnitArea(enabled, length, width, I, J, K)
+
+        strs.Add("
+ Per Unit
+Area: " + IIf(enabled, "True", "False"))
+
+        If
+enabled Then
+
+            strs.Add("
+ Per Unit
+Length: " + FormatDouble(length))
+
+            strs.Add("
+ Per Unit
+Width: " + FormatDouble(width))
+
+            strs.Add("
+ Per Unit
+Direction: " + FormatVector(I, J, K))
+
+        End
+If
+
+    End
+Sub
+
+    Private
+Sub CircularityData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Circularity
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+    End
+Sub
+
+    Private
+Sub CylindricityData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Cylindricity
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+    End
+Sub
+
+    Private
+Sub StraightnessData(ByVal annotation As DimXpertStraightnessTolerance)
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+enabled As Boolean
+
+        Dim
+dist As Double
+
+        Dim
+boolstatus As Boolean
+
+        'tolerance
+compartment info
+
+        strs.Add("")
+
+        strs.Add("Straightness
+Tolerance Compartment")
+
+        'type
+or shape of the tolerance zone
+
+        Select
+Case annotation.ZoneType
+
+            Case
+swDimXpertStraightnessZoneType\_e.swDimXpertStraightnessZoneType\_Cylindrical
+
+                strs.Add("
+ Zone Type:
+Cylindrical")
+
+            Case
+swDimXpertStraightnessZoneType\_e.swDimXpertStraightnessZoneType\_PlanarMedian
+
+                strs.Add("
+ Zone Type:
+Planar Median")
+
+            Case
+swDimXpertStraightnessZoneType\_e.swDimXpertStraightnessZoneType\_Surface
+
+                strs.Add("
+ Zone Type:
+Surface Straightness")
+
+                boolstatus
+= annotation.GetPlanarZoneVector(I, J, K)
+
+                strs.Add("
+ Zone Vector:
+" + FormatVector(I, J, K))
+
+        End
+Select
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        'per
+unit length
+
+        boolstatus
+= annotation.GetPerUnitLength(enabled, dist)
+
+        strs.Add("
+ Per Unit
+Length: " + IIf(enabled, "True", "False"))
+
+        If
+enabled Then
+
+            strs.Add("
+ Per Unit
+Length Distance:  "
++ FormatDouble(dist))
+
+        End
+If
+
+        '
+the material condition modifer
+
+        strs.Add("
+ Modifier:
+" + mcmStr(annotation.Modifier))
+
+    End
+Sub
+
+    Private
+Sub ProfileData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Profile
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+        '
+the datum reference frame
+
+        Call
+DatumsStr(annotation)
+
+    End
+Sub
+
+    Private
+Sub SurfaceFinishData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Surface
+Finish Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+    End
+Sub
+
+    Private
+Sub TangencyData(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Tangency
+Tolerance Compartment")
+
+        '
+the tolerance value
+
+        strs.Add("
+ Tolerance:
+" + FormatDouble(annotation.Tolerance))
+
+    End
+Sub
+
+    Private
+Sub DimensionToleranceData(ByVal annotation As DimXpertDimensionTolerance)
+
+        Dim
+isAngleType As Boolean
+
+        Dim
+annoType As Long
+
+        Dim
+upper As Double, lower As Double
+
+        Dim
+plus As Double, minus As Double
+
+        Dim
+boolstatus As Boolean
+
+        annoType
+= annotation.Type
+
+        isAngleType
+= False
+
+        strs.Add("")
+
+        strs.Add("Dimension
+Tolerance Compartment")
+
+        If
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_DistanceBetween
+Then
+
+            Call
+DistanceBetweenData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_CompositeDistanceBetween
+Then
+
+            Call
+CompositeDistanceBetweenData(annotation)
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterBore
+Then
+
+            Dim
+cbAnno As IDimXpertCounterBoreDimTol
+
+            cbAnno
+= annotation
+
+            If
+cbAnno.ReferenceFeature Is Nothing
+Then
+
+                strs.Add("Reference
+Feature: NULL")
+
+            Else
+
+                strs.Add("Reference
+Feature: " + cbAnno.ReferenceFeature.Name)
+
+            End
+If
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_Depth
+Then
+
+            Dim
+depthAnno As IDimXpertDepthDimTol
+
+            depthAnno
+= annotation
+
+            If
+depthAnno.ReferenceFeature Is
+Nothing Then
+
+                strs.Add("Reference
+Feature: NULL")
+
+            Else
+
+                strs.Add("Reference
+Feature: " + depthAnno.ReferenceFeature.Name)
+
+            End
+If
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterSinkDiameter
+Then
+
+            If
+annotation.ReferenceFeature Is Nothing Then
+
+                strs.Add("Reference
+Feature: NULL")
+
+            Else
+
+                strs.Add("Reference
+Feature: " + annotation.ReferenceFeature.Name)
+
+            End
+If
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_ChamferDimension
+Then
+
+            Dim
+chamferAnno As IDimXpertChamferDimTol
+
+            chamferAnno
+= annotation
+
+            Select
+Case chamferAnno.ChamferType
+
+                Case
+swDimXpertChamferDimensionType\_e.swDimXpertChamferDimensionType\_Angle
+
+                    strs.Add("Chamfer
+Dimension Type: Angle")
+
+                    isAngleType
+= True
+
+                Case
+swDimXpertChamferDimensionType\_e.swDimXpertChamferDimensionType\_LinearDistance1
+
+                    strs.Add("Chamfer
+Dimension Type: Distance 1")
+
+                Case
+swDimXpertChamferDimensionType\_e.swDimXpertChamferDimensionType\_LinearDistance2
+
+                    strs.Add("Chamfer
+Dimension Type: Distance 2")
+
+            End
+Select
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_AngleBetween Then
+
+            isAngleType
+= True
+
+            '
+the origin and tolerance feature
+
+            strs.Add("Origin
+Feature: " + annotation.OriginFeature.Name)
+
+            '
+is supplement angle
+
+            strs.Add("Supplement
+Angle: " + IIf(annotation.Supplement, "True", "False"))
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterSinkAngle
+Then
+
+            isAngleType
+= True
+
+            If
+annotation.ReferenceFeature Is Nothing Then
+
+                strs.Add("Reference
+Feature: NULL")
+
+            Else
+
+                strs.Add("Reference
+Feature: " + annotation.ReferenceFeature.Name)
+
+            End
+If
+
+        ElseIf
+annoType = swDimXpertAnnotationType\_e.swDimXpertDimTol\_ConeAngle Then
+
+            isAngleType
+= True
+
+        End
+If
+
+        '
+conversion for radians to degrees when dimension type is angle
+
+        Dim
+dbl As Double
+
+        If
+isAngleType Then
+
+            dbl
+= 57.2957795130823
+
+        Else
+
+            dbl
+= 1.0#
+
+        End
+If
+
+        '
+the nominal, and upper and lower limits of size of the dimension
+
+        strs.Add("")
+
+        strs.Add("Compute
+Nominal Dimension: " + FormatDouble(annotation.GetNominalValue \*
+dbl))
+
+        boolstatus
+= annotation.GetUpperAndLowerLimit(upper, lower)
+
+        strs.Add("Get
+Upper Limit: " + FormatDouble(upper \* dbl))
+
+        strs.Add("Get
+Lower Limit: " + FormatDouble(lower \* dbl))
+
+        '
+the upper and lower tolerance value by type
+
+        Select
+Case annotation.DimensionType
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_BlockTolerance
+
+                strs.Add("Dimension
+Type: Block Tolerance")
+
+                '
+block tolerance
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_BlockToleranceNoNominal
+
+                Dim
+blockTols As DimXpertBlockTolerances
+
+                blockTols
+= dimXpertPart.GetBlockTolerances
+
+                Select
+Case blockTols.Type
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ASMEInch
+
+                        strs.Add("Dimension
+Type: Block Tolerance No Nominal")
+
+                        If
+isAngleType Then
+
+                            strs.Add("Angular
+Block Tolerance")
+
+                        Else
+
+                            strs.Add("Block
+Tolerance Decimal Places: " + Format(annotation.BlockToleranceDecimalPlaces,
+"##,##0"))
+
+                        End
+If
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ISO2768
+
+                        strs.Add("Dimension
+Type: General Tolerance")
+
+                End
+Select
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_ISOLimitsAndFits
+
+                strs.Add("Dimension
+Type: Limits and Fits")
+
+                '
+limits and fits tolerance
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_ISOLimitsAndFitsNoNominal
+
+                strs.Add("Dimension
+Type: Limits and Fits No Nominal")
+
+                strs.Add("Limits
+and Fits: " + annotation.LimitsAndFitsCode)
+
+                '
+limit dimension
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_LimitDimension
+
+                strs.Add("Dimension
+Type: Limit Dimension")
+
+                boolstatus
+= annotation.GetUpperAndLowerLimit(upper, lower)
+
+                strs.Add("Get
+Upper Limit: " + FormatDouble(upper \* dbl))
+
+                strs.Add("Get
+Lower Limit: " + FormatDouble(lower \* dbl))
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_MAXTolerance
+
+                strs.Add("Dimension
+Type: MAXTolerance")
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_MINTolerance
+
+                strs.Add("Dimension
+Type: MINTolerance")
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_NoTolerance
+
+                strs.Add("Dimension
+Type: NoTolerance")
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_PlusMinusDimension
+
+                strs.Add("Dimension
+Type: Plus Minus Dimension")
+
+                '
+plus and minus dimension
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_PlusMinusNoNominal
+
+                strs.Add("Dimension
+Type: Plus Minus No Nominal")
+
+                boolstatus
+= annotation.GetPlusAndMinusTolerance(plus, minus)
+
+                strs.Add("Plus
+ Tolerance:
+" + FormatDouble(plus \* dbl))
+
+                strs.Add("Minus
+Tolerance: " + FormatDouble(minus \* dbl))
+
+        End
+Select
+
+    End
+Sub
+
+    Private
+Sub DistanceBetweenData(ByVal annotation As DimXpertDistanceBetweenDimTol)
+
+        Dim
+feature As DimXpertFeature
+
+        Dim
+featureFosUsage As Long
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+boolstatus As Boolean
+
+        feature
+= Nothing
+
+        '
+the origin and tolerance feature along with their feature of size usage
+(min, max, center)
+
+        boolstatus
+= annotation.GetOriginFeature(feature, featureFosUsage)
+
+        strs.Add("")
+
+        strs.Add("Origin
+Feature: " + feature.Name + " @ " + FosUsage(featureFosUsage))
+
+        boolstatus
+= annotation.GetFeature(feature, featureFosUsage)
+
+        strs.Add("Tolerance
+Feature: " + feature.Name + " @ " + FosUsage(featureFosUsage))
+
+        '
+The direction vector
+
+        boolstatus
+= annotation.GetDirectionVector(I, J, K)
+
+        strs.Add("")
+
+        strs.Add("Direction
+Vector: " + FormatVector(I, J, K))
+
+    End
+Sub
+
+    Private
+Sub CompositeDistanceBetweenData(ByVal annotation As DimXpertCompositeDistanceBetweenDimTol)
+
+        Dim
+feature As DimXpertFeature
+
+        Dim
+featureFosUsage As Long
+
+        Dim
+plus As Double, minus As Double
+
+        Dim
+I As Double, J As Double, K As Double
+
+        Dim
+boolstatus As Boolean
+
+        feature
+= Nothing
+
+        '
+the origin and tolerance feature along with their feature of size usage
+(min, max, center)
+
+        boolstatus
+= annotation.GetOriginFeature(feature, featureFosUsage)
+
+        strs.Add("")
+
+        strs.Add("Origin
+Feature: " + feature.Name + " @ " + FosUsage(featureFosUsage))
+
+        boolstatus
+= annotation.GetFeature(feature, featureFosUsage)
+
+        strs.Add("Tolerance
+Feature: " + feature.Name + " @ " + FosUsage(featureFosUsage))
+
+        '
+the pattern locating feature
+
+        boolstatus
+= annotation.GetIntraFeature(feature, featureFosUsage)
+
+        strs.Add("Pattern
+Locating Feature: " + feature.Name + " @ " + FosUsage(featureFosUsage))
+
+        '
+The direction vector
+
+        boolstatus
+= annotation.GetDirectionVector(I, J, K)
+
+        strs.Add("")
+
+        strs.Add("Direction
+Vector: " + FormatVector(I, J, K))
+
+        '
+the upper and lower tolerance value for the pattern location by type
+
+        Dim
+dimTol As IDimXpertDimensionTolerance
+
+        dimTol
+= annotation
+
+        Select
+Case dimTol.DimensionType
+
+            '
+plus and minus dimension
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_PlusMinusNoNominal
+
+                dimTol.GetPlusAndMinusTolerance(plus,
+minus)
+
+                strs.Add("Pattern
+Locating Dimension Type:  Plus
+Minus No Nominal")
+
+                strs.Add("
+ Plus  Tolerance:
+" + FormatDouble(plus))
+
+                strs.Add("
+ Minus Tolerance:
+" + FormatDouble(minus))
+
+                '
+block tolerance
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_BlockToleranceNoNominal
+
+                Dim
+blockTols As DimXpertBlockTolerances
+
+                blockTols
+= dimXpertPart.GetBlockTolerances
+
+                Select
+Case blockTols.Type
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ASMEInch
+
+                        strs.Add("Pattern
+Locating Dimension Type: Block Tolerance No Nominal")
+
+                        strs.Add("
+ Block Tolerance
+Decimal Places: " + Format(annotation.BlockToleranceDecimalPlaces,
+"##,##0"))
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ISO2768
+
+                        strs.Add("Pattern
+Locating Dimension Type: General Tolerance")
+
+                End
+Select
+
+        End
+Select
+
+        '
+the upper and lower tolerance value for the feature to feature location
+by type
+
+        Select
+Case annotation.DimensionTypeIntraFeature
+
+            '
+plus and minus dimension
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_PlusMinusNoNominal
+
+                strs.Add("Feature
+Locating Dimension Type: Plus Minus No Nominal")
+
+                boolstatus
+= annotation.GetPlusAndMinusToleranceIntraFeature(plus, minus)
+
+                strs.Add("
+ Plus  Tolerance:
+" + FormatDouble(plus))
+
+                strs.Add("
+ Minus Tolerance:
+" + FormatDouble(minus))
+
+                '
+block tolerance
+
+            Case
+swDimXpertDimensionToleranceType\_e.swDimXpertDimTolType\_BlockToleranceNoNominal
+
+                Dim
+blockTols As DimXpertBlockTolerances
+
+                blockTols
+= dimXpertPart.GetBlockTolerances
+
+                Select
+Case blockTols.Type
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ASMEInch
+
+                        strs.Add("Feature
+locating Dimension Type: Block Tolerance No Nominal")
+
+                        strs.Add("
+ Block Tolerance
+Decimal Places: " + Format(annotation.BlockToleranceDecimalPlacesIntraFeature,
+"##,##0"))
+
+                    Case
+swDimXpertBlockToleranceType\_e.swDimXpertBlockToleranceType\_ISO2768
+
+                        strs.Add("Feature
+locating Dimension Type: General Tolerance")
+
+                End
+Select
+
+        End
+Select
+
+    End
+Sub
+
+    Private
+Sub DatumsStr(ByVal annotation As DimXpertTolerance)
+
+        strs.Add("")
+
+        strs.Add("Datums:")
+
+        Call
+datumStr(annotation.GetPrimaryDatums(), annotation.GetPrimaryDatumModifiers(),
+"  Primary:")
+
+        Call
+datumStr(annotation.GetSecondaryDatums(), annotation.GetSecondaryDatumModifiers(),
+"  Secondary:")
+
+        Call
+datumStr(annotation.GetTertiaryDatums(), annotation.GetTertiaryDatumModifiers(),
+"  Tertiary:")
+
+    End
+Sub
+
+    Private
+Sub datumStr(ByVal dats As Object, ByVal mods As Object, ByVal datumOrder
+As String)
+
+        Dim
+I As Long
+
+        Dim
+str As String
+
+        Dim
+mcm As Long
+
+        If
+IsNothing(dats) Then
+
+            Exit
+Sub
+
+        End
+If
+
+        str
+= ""
+
+        For
+I = LBound(dats) To UBound(dats)
+
+            mcm
+= mods(I)
+
+            str
+= str + "  "
++ dats(I).Identifier + " @ " + mcmStr(mcm)
+
+        Next
+I
+
+        If
+StrComp(str, "") > 0 Then
+
+            strs.Add(datumOrder
++ str)
+
+        Else
+
+            strs.Add(datumOrder
++ " <none>")
+
+        End
+If
+
+    End
+Sub
+
+    '
+returns a string containing the heith of the projected tolerance zone
+
+    Private
+Sub FormatProjectedZone(ByVal enabled As Boolean, ByVal height As Double)
+
+        If
+enabled = True Then
+
+            strs.Add("
+ Projected
+Zone:  True")
+
+            strs.Add("
+ Zone Height:
+" + FormatDouble(height))
+
+        Else
+
+            strs.Add("
+ Projected
+Zone:  False")
+
+        End
+If
+
+    End
+Sub
+
+    Private
+Function mcmStr(ByVal mcm As Long) As String
+
+        Dim
+str As String
+
+        str
+= ""
+
+        Select
+Case mcm
+
+            Case
+swDimXpertMaterialConditionModifier\_e.swDimXpertMCM\_LMC
+
+                str
+= "LMC"
+
+            Case
+swDimXpertMaterialConditionModifier\_e.swDimXpertMCM\_MMC
+
+                str
+= "MMC"
+
+            Case
+swDimXpertMaterialConditionModifier\_e.swDimXpertMCM\_NoMCM
+
+                str
+= "NoMCM"
+
+            Case
+swDimXpertMaterialConditionModifier\_e.swDimXpertMCM\_RFS
+
+                str
+= "RFS"
+
+        End
+Select
+
+        mcmStr
+= str
+
+    End
+Function
+
+    '
+returns a string containing the type of position tolerance zone used
+
+    Private
+Function PositionZoneType(ByVal typ As Long) As String
+
+        Dim
+str As String
+
+        Select
+Case typ
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_CylindricalPosition
+
+                str
+= "Cylindrical"
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_PlanarPosition
+
+                str
+= "Planar"
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_SphericalPosition
+
+                str
+= "Spherical"
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_Boundary
+
+                str
+= "Boundary"
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_RadialPositionArc
+
+                str
+= "RadialPositionArc"
+
+            Case
+swDimXpertPositionZoneType\_e.swDimXpertPositionZoneType\_RadialPositionPlanar
+
+                str
+= "RadialPositionPlanar"
+
+            Case
+Else
+
+                str
+= "N/A"
+
+        End
+Select
+
+        PositionZoneType
+= str
+
+    End
+Function
+
+    '
+returns a string containing the names of the SW display entities
+
+    Private
+Function DisplayEntity(ByVal annotation As DimXpertAnnotation) As String
+
+        Dim
+str As String
+
+        Dim
+dispEnt As Object
+
+        Dim
+swAnnot As SolidWorks.Interop.sldworks.Annotation
+
+        str
+= ""
+
+        'Set
+dispEnt = swDimXpert.GetDisplayEntity(annot)
+
+        dispEnt
+= annotation.GetDisplayEntity()
+
+        If
+Not dispEnt Is Nothing Then
+
+            If
+TypeOf dispEnt Is SolidWorks.Interop.sldworks.Annotation Then
+
+                swAnnot
+= dispEnt
+
+                str
+= swAnnot.GetName
+
+            End
+If
+
+        End
+If
+
+        DisplayEntity
+= str
+
+    End
+Function
+
+    '
+returns a string containing the feature of size usage (min, max, center)
+
+    Private
+Function FosUsage(ByVal value As Long) As String
+
+        Dim
+str As String
+
+        Select
+Case value
+
+            Case
+swDimXpertDistanceFosUsage\_e.swDimXpertDistanceFosUsage\_Center
+
+                str
+= "Center"
+
+            Case
+swDimXpertDistanceFosUsage\_e.swDimXpertDistanceFosUsage\_MaximumSide
+
+                str
+= "Max"
+
+            Case
+swDimXpertDistanceFosUsage\_e.swDimXpertDistanceFosUsage\_MinimumSide
+
+                str
+= "Min"
+
+            Case
+Else
+
+                str
+= "N/A"
+
+        End
+Select
+
+        FosUsage
+= str
+
+    End
+Function
+
+    Private
+Function FormatVector(ByVal I As Double, ByVal J As Double, ByVal K As
+Double) As String
+
+        Dim
+str As String
+
+        str
+= FormatDouble(I) + ", " + FormatDouble(J) + ", "
++ FormatDouble(K)
+
+        FormatVector
+= str
+
+    End
+Function
+
+    Private
+Function FormatDouble(ByVal value As Double) As String
+
+        Dim
+str As String
+
+        str
+= Format(value, "##,##0.0000")
+
+        FormatDouble
+= str
+
+    End
+Function
+
+    Private
+Function RadiansToDegrees(ByVal value As Double) As String
+
+        Dim
+str As String
+
+        str
+= Format((value \* 57.2957795130823), "##,##0.00")
+
+        RadiansToDegrees
+= str
+
+    End
+Function
+
+    Private
+Function annotationTypeNameFromObject(ByVal anno As DimXpertAnnotation)
+As String
+
+        annotationTypeNameFromObject
+= annotationTypeNameFromTypeNumber(anno.Type)
+
+    End
+Function
+
+    Private
+Function annotationTypeNameFromTypeNumber(ByVal annoTypeIndex As Long)
+As String
+
+        Select
+Case annoTypeIndex
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_DistanceBetween
+
+                annotationTypeNameFromTypeNumber
+= "DistanceBetween Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterBore
+
+                annotationTypeNameFromTypeNumber
+= "CounterBore Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_Depth
+
+                annotationTypeNameFromTypeNumber
+= "Depth Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterSinkDiameter
+
+                annotationTypeNameFromTypeNumber
+= "CounterSinkDiameter Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_ChamferDimension
+
+                annotationTypeNameFromTypeNumber
+= "ChamferDimension Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_AngleBetween
+
+                annotationTypeNameFromTypeNumber
+= "AngleBetween Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_CounterSinkAngle
+
+                annotationTypeNameFromTypeNumber
+= "CounterSinkAngle Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_ConeAngle
+
+                annotationTypeNameFromTypeNumber
+= "ConeAngle Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_Diameter
+
+                annotationTypeNameFromTypeNumber
+= "Diameter Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_Length
+
+                annotationTypeNameFromTypeNumber
+= "Length Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_Radius
+
+                annotationTypeNameFromTypeNumber
+= "Radius Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_Width
+
+                annotationTypeNameFromTypeNumber
+= "Width Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDimTol\_CompositeDistanceBetween
+
+                annotationTypeNameFromTypeNumber
+= "CompositeDistanceBetween Dim"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertDatum
+
+                annotationTypeNameFromTypeNumber
+= "Datum"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Position
+
+                annotationTypeNameFromTypeNumber
+= "Position Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositePosition
+
+                annotationTypeNameFromTypeNumber
+= "CompositePosition Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Symmetry
+
+                annotationTypeNameFromTypeNumber
+= "Symmetry Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Concentricity
+
+                annotationTypeNameFromTypeNumber
+= "Concentricity Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_LineProfile
+
+                annotationTypeNameFromTypeNumber
+= "LineProfile Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositeLineProfile
+
+                annotationTypeNameFromTypeNumber
+= "CompositeLineProfile Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_SurfaceProfile
+
+                annotationTypeNameFromTypeNumber
+= "SurfaceProfile Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CompositeSurfaceProfile
+
+                annotationTypeNameFromTypeNumber
+= "CompositeSurfaceProfile Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Angularity
+
+                annotationTypeNameFromTypeNumber
+= "Angularity Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Parallelism
+
+                annotationTypeNameFromTypeNumber
+= "Parallelism Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Perpendicularity
+
+                annotationTypeNameFromTypeNumber
+= "Perpendicularity Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_TotalRunout
+
+                annotationTypeNameFromTypeNumber
+= "TotalRunout Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_CircularRunout
+
+                annotationTypeNameFromTypeNumber
+= "CircularRunout Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Flatness
+
+                annotationTypeNameFromTypeNumber
+= "Flatness Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Circularity
+
+                annotationTypeNameFromTypeNumber
+= "Circularity Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Cylindricity
+
+                annotationTypeNameFromTypeNumber
+= "Cylindricity Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Straightness
+
+                annotationTypeNameFromTypeNumber
+= "Straightness Tol"
+
+            Case
+swDimXpertAnnotationType\_e.swDimXpertGeoTol\_Tangency
+
+                annotationTypeNameFromTypeNumber
+= "Tangency Tol"
+
+            Case
+Else
+
+                annotationTypeNameFromTypeNumber
+= "<unknown> " & CStr(annoTypeIndex)
+
+        End
+Select
+
+    End
+Function
+
+    Public
+swApp As SldWorks
+
+End Class

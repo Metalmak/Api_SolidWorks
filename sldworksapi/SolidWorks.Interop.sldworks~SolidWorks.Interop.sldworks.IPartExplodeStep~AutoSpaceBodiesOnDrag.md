@@ -1,0 +1,79 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep~AutoSpaceBodiesOnDrag.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| AutoSpaceBodiesOnDrag Property (IPartExplodeStep) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IPartExplodeStep Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep.html) : AutoSpaceBodiesOnDrag Property (IPartExplodeStep) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets or sets whether to automatically space a group of bodies equally along an axis as you drag them in this explode step.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property AutoSpaceBodiesOnDrag As System.Boolean ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IPartExplodeStep Dim value As System.Boolean   instance.AutoSpaceBodiesOnDrag = value   value = instance.AutoSpaceBodiesOnDrag ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.bool AutoSpaceBodiesOnDrag {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.bool AutoSpaceBodiesOnDrag {    System.bool get();    void set ( &   System.bool value); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Property Value
+
+True to automatically space components equally along an axis as you drag them, false to not
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See PartExplodeStep::AutoSpaceBodiesOnDrag.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the [IPartExplodeStep](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep.html) example.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IPartExplodeStep Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep.html)
+
+[IPartExplodeStep Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPartExplodeStep_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2020 FCS, Revision Number 28.0

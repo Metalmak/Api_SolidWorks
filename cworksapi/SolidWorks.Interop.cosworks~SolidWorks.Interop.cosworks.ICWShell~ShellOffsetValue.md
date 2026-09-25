@@ -1,0 +1,89 @@
+<!-- source: cworksapi/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWShell~ShellOffsetValue.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Simulation API Help | Send comments on this topic. |
+| ShellOffsetValue Property (ICWShell) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html) > [ICWShell Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWShell.html) : ShellOffsetValue Property (ICWShell) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets or sets the shell offset value.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property ShellOffsetValue As System.Double ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICWShell Dim value As System.Double   instance.ShellOffsetValue = value   value = instance.ShellOffsetValue ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.double ShellOffsetValue {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.double ShellOffsetValue {    System.double get();    void set ( &   System.double value); } ``` | |
+
+#### Property Value
+
+* -0.5 < offset value < 0
+
+    -or-
+
+* 0 < offset value < 0.5 (see **Remarks**)
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CWShell::ShellOffsetValue.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Linear Dynamic Study (C#)](Create_Dynamic_Harmonic_Study_Example_CSharp.htm)
+
+[Create Linear Dynamic Study (VB.NET)](Create_Dynamic_Harmonic_Study_Example_VBNET.htm)
+
+[Create Linear Dynamic Study (VBA)](Create_Dynamic_Harmonic_Study_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This property is valid only if [ICWShell::ShellOffsetOption](SOLIDWORKS.Interop.cosworks~SOLIDWORKS.Interop.cosworks.ICWShell~ShellOffsetOption.html) is set to swsShellOffsetOption\_e.swsShellOffsetOption\_SpecifyRatio.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICWShell Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWShell.html)
+
+[ICWShell Members](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWShell_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS Simulation API 2012 SP0

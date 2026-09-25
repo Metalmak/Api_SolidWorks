@@ -1,0 +1,40 @@
+<!-- source: cworksapi/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidComponent_properties.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Simulation API Help | Send comments on this topic. |
+| ICWSolidComponent Interface Properties | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All |
+
+|  |
+| --- |
+| [SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html) : ICWSolidComponent Interface |
+
+For a list of all members of this type, see [ICWSolidComponent members](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidComponent_members.html).
+
+# ![](dotnetimages/collapse.gif)Public Properties
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![ Property](dotnetimages/Property.gif) | [ComponentName](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidComponent~ComponentName.html) | Gets the name of the solid component. |
+| ![ Property](dotnetimages/Property.gif) | [SolidBodyCount](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidComponent~SolidBodyCount.html) | Gets the number of solid bodies in the solid component. |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICWSolidComponent Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidComponent.html)
+
+[SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html)
+
+[ICWSolidBody Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidBody.html)
+
+[ICWSolidManager Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWSolidManager.html)

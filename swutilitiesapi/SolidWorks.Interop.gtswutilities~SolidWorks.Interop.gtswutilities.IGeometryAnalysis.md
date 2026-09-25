@@ -1,0 +1,77 @@
+<!-- source: swutilitiesapi/SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities.IGeometryAnalysis.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Utilities API Help | Send comments on this topic. |
+| IGeometryAnalysis Interface | |
+| [See Also](#seealsobookmark)  [Members](SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities.IGeometryAnalysis_members.html)   [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.gtswutilities Namespace](SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities_namespace.html) : IGeometryAnalysis Interface |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Identifies geometric entities in a part that could cause a problem in other applications.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Interface IGeometryAnalysis ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IGeometryAnalysis ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public interface IGeometryAnalysis ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public interface class IGeometryAnalysis ``` | |
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See IGeometryAnalysis.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Analyze Geometry (VBA)](Analyze_Geometry_VB6.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+These applications include finite element modeling or computer-aided machining.
+
+# ![](dotnetimages/collapse.gif)Accessors
+
+[IUtilities::GeometryAnalysis](SOLIDWORKS.Interop.gtswutilities~SOLIDWORKS.Interop.gtswutilities.IUtilities~GeometryAnalysis.html)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IGeometryAnalysis Members](SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities.IGeometryAnalysis_members.html)
+
+[SolidWorks.Interop.gtswutilities Namespace](SolidWorks.Interop.gtswutilities~SolidWorks.Interop.gtswutilities_namespace.html)

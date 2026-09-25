@@ -1,0 +1,205 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IConvertPcurveToBcurveSize.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| IConvertPcurveToBcurveSize Method (ICurve) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ICurve Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve.html) : IConvertPcurveToBcurveSize Method (ICurve) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*Dim*
+:   Dimension of the curve:
+
+    * 3 = nonrational
+
+      * 4 = rational
+
+*Order*
+:   Order of the curve; minimum is 2 (linear)
+
+*Nsegs*
+:   Number of segments in the curve; must be at least 1
+
+*Coeffs*
+:   Array of coefficients
+
+*Basis*
+:   0; not currently used
+
+*Xform*
+:   Transformation matrix to apply after conversion to b-curve
+
+*ScaleFactor*
+:   Units conversion factor to apply after conversion to b-curve
+
+Creates a b-curve from piecewise data.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function IConvertPcurveToBcurveSize( _    ByVal Dim As System.Integer, _    ByVal Order As System.Integer, _    ByVal Nsegs As System.Integer, _    ByRef Coeffs As System.Double, _    ByVal Basis As System.Integer, _    ByRef Xform As System.Double, _    ByVal ScaleFactor As System.Double _ ) As System.Integer ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICurve Dim Dim As System.Integer Dim Order As System.Integer Dim Nsegs As System.Integer Dim Coeffs As System.Double Dim Basis As System.Integer Dim Xform As System.Double Dim ScaleFactor As System.Double Dim value As System.Integer   value = instance.IConvertPcurveToBcurveSize(Dim, Order, Nsegs, Coeffs, Basis, Xform, ScaleFactor) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.int IConvertPcurveToBcurveSize(     System.int Dim,    System.int Order,    System.int Nsegs,    ref System.double Coeffs,    System.int Basis,    ref System.double Xform,    System.double ScaleFactor ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.int IConvertPcurveToBcurveSize(  &   System.int Dim, &   System.int Order, &   System.int Nsegs, &   System.double% Coeffs, &   System.int Basis, &   System.double% Xform, &   System.double ScaleFactor ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*Dim*
+:   Dimension of the curve:
+
+    * 3 = nonrational
+
+      * 4 = rational
+
+*Order*
+:   Order of the curve; minimum is 2 (linear)
+
+*Nsegs*
+:   Number of segments in the curve; must be at least 1
+
+*Coeffs*
+:   Array of coefficients
+
+*Basis*
+:   0; not currently used
+
+*Xform*
+:   Transformation matrix to apply after conversion to b-curve
+
+*ScaleFactor*
+:   Units conversion factor to apply after conversion to b-curve
+
+#### Return Value
+
+Indicates that conversion succeeded or failed
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Curve::IConvertPcurveToBcurveSize.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+Dimension of coefficient vectors dim:
+
+* For rational curves dim = 4.
+
+  * For non-rational curves dim = 3.
+
+Order of each segment of the curve order:
+
+1. The order of the curve = degree + 1.
+
+   - The minimum order is 2.
+
+Number of segments in the curve nseg:
+
+* There must be at least one segment (nseg >= 1).
+
+  * Adjacent segments must meet.
+
+Coefficient data coeffs:
+
+* Contains order \* nseg vectors of dimension dim. If dim = 3, then the vectors are 3-D vectors giving the x, y and z components. If dim = 4, then each vector has a weight (w) associated with it, and x, y, z and w components are supplied for each vector. The weights supplied must be greater than 0.
+
+  * The coefficients are supplied in order, segment by segment.
+
+    * The interpretation of the coefficients depends on the representation method chosen; this is determined by the value of the argument basis.
+
+Representation method basis:
+
+The expressions for each segment of the B-curve P(t) in the various representations are shown next. For generality, the rational form is given.
+
+The simplification to the non-rational form can be obtained by setting both the weights and the denominator equal to 1.0
+
+Polynomial coefficients:
+
+The curve equation is given by a rational polynomial of order 'order':
+
+                        n                     n
+
+                        --         i        / --     i
+
+          P(t)   =   >   w  A  t     /   >  w  t
+
+                        --   i  i    /        --  i
+
+                        i=0                 i=0
+
+          where n = order-1
+
+                A = polynomial coefficient
+
+                  i
+
+                w = weight for A
+
+                  i              i
+
+The polynomial coefficients are supplied starting with the constant  term and ending with the term of highest degree.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICurve Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve.html)
+
+[ICurve Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve_members.html)
+
+[ICurve::ExtentCurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~ExtentCurve.html)
+
+[ICurve::MakeBsplineCurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~MakeBsplineCurve.html)
+
+[ICurve::SimplifyBCurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~SimplifyBCurve.html)
+
+[ConvertArcToBcurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~ConvertArcToBcurve.html)
+
+[ConvertLineToBcurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~ConvertLineToBcurve.html)
+
+[GetBCurveParams Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~GetBCurveParams.html)
+
+[ICurve::IConvertArcToBcurveSize Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IConvertArcToBcurveSize.html)
+
+[ICurve::IConvertLineToBcurveSize Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IConvertLineToBcurveSize.html)
+
+[ICurve::IGetBCurveParams Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IGetBCurveParams.html)
+
+[ICurve::IGetBCurveParamsSize2 Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IGetBCurveParamsSize2.html)
+
+[ICurve::IsBcurve Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICurve~IsBcurve.html)

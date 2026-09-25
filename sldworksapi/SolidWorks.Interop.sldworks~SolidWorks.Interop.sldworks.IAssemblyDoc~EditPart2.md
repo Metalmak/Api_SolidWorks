@@ -1,0 +1,115 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~EditPart2.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| EditPart2 Method (IAssemblyDoc) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IAssemblyDoc Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc.html) : EditPart2 Method (IAssemblyDoc) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*Silent*
+:   True to suppress messages to user, false to not
+
+*AllowReadOnly*
+:   True to allow editing of read-only parts, false to not
+
+*Information*
+:   Status as defined in swEditPartCommandStatus\_e
+
+Edits the selected part within the context of an assembly.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function EditPart2( _    ByVal Silent As System.Boolean, _    ByVal AllowReadOnly As System.Boolean, _    ByRef Information As System.Integer _ ) As System.Integer ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IAssemblyDoc Dim Silent As System.Boolean Dim AllowReadOnly As System.Boolean Dim Information As System.Integer Dim value As System.Integer   value = instance.EditPart2(Silent, AllowReadOnly, Information) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.int EditPart2(     System.bool Silent,    System.bool AllowReadOnly,    ref System.int Information ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.int EditPart2(  &   System.bool Silent, &   System.bool AllowReadOnly, &   System.int% Information ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*Silent*
+:   True to suppress messages to user, false to not
+
+*AllowReadOnly*
+:   True to allow editing of read-only parts, false to not
+
+*Information*
+:   Status as defined in swEditPartCommandStatus\_e
+
+#### Return Value
+
+swEditPartSuccessful if successful
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See AssemblyDoc::EditPart2.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Plane thru 3 Points In-context (VBA)](Create_Plane_Thru_3_Points_In-context_Example_VB.htm)
+
+[Suppress Component Feature (C#)](Suppress_Component_Feature_Example_CSharp.htm)
+
+[Suppress Component Feature (VB.NET)](Suppress_Component_Feature_Example_VBNET.htm)
+
+[Suppress Component Feature (VBA)](Suppress_Component_Feature_Example_VB.htm)
+
+[Insert Cavity (C#)](Insert_Cavity_Example_CSharp.htm)
+
+[Insert Cavity (VB.NET)](Insert_Cavity_Example_VBNET.htm)
+
+[Insert Cavity (VBA)](Insert_Cavity_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This method allows you to control the display of dialog boxes and edit a read-only document. To return to editing the assembly, use [IAssemblyDoc::EditAssembly](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IAssemblyDoc~EditAssembly.html).
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IAssemblyDoc Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc.html)
+
+[IAssemblyDoc Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2000 FCS, Revision Number 8.0

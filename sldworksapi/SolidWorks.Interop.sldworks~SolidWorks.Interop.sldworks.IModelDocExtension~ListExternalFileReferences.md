@@ -1,0 +1,143 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ListExternalFileReferences.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ListExternalFileReferences Method (IModelDocExtension) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IModelDocExtension Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension.html) : ListExternalFileReferences Method (IModelDocExtension) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*ModelPathName*
+:   Array of path names of documents
+
+*ComponentPathName*
+:   Array of path names of referenced components
+
+*Feature*
+:   Array of in-context items (sketches, features, and so on)
+
+*DataType*
+:   Array of the type of data used to create the items (converted edge or face, converted or offset sketch entity, body, and so on)
+
+*Status*
+:   Array of the statuses of the external references as defined in swExternalReferenceStatus\_e
+
+*RefEntity*
+:   Array of the actual items being used and the names of the documents that contain the items
+
+*FeatCom*
+:   Array of the names of the components in which the affected features exist; this information is only displayed when one or more RefEntity is in a different component in an assembly and does not apply to derived parts
+
+*ConfigOption*
+:   Configuration options as defined by swExternalFileReferencesConfig\_e
+
+*ConfigName*
+:   Name of the configuration when configOption is swExternalFileReferencesNamedConfig
+
+Obsolete. Superseded by [IModelDocExtension::ListExternalFileReferences2](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ListExternalFileReferences2.html).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Sub ListExternalFileReferences( _    ByRef ModelPathName As System.Object, _    ByRef ComponentPathName As System.Object, _    ByRef Feature As System.Object, _    ByRef DataType As System.Object, _    ByRef Status As System.Object, _    ByRef RefEntity As System.Object, _    ByRef FeatCom As System.Object, _    ByRef ConfigOption As System.Integer, _    ByRef ConfigName As System.String _ ) ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IModelDocExtension Dim ModelPathName As System.Object Dim ComponentPathName As System.Object Dim Feature As System.Object Dim DataType As System.Object Dim Status As System.Object Dim RefEntity As System.Object Dim FeatCom As System.Object Dim ConfigOption As System.Integer Dim ConfigName As System.String   instance.ListExternalFileReferences(ModelPathName, ComponentPathName, Feature, DataType, Status, RefEntity, FeatCom, ConfigOption, ConfigName) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` void ListExternalFileReferences(     out System.object ModelPathName,    out System.object ComponentPathName,    out System.object Feature,    out System.object DataType,    out System.object Status,    out System.object RefEntity,    out System.object FeatCom,    out System.int ConfigOption,    out System.string ConfigName ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` void ListExternalFileReferences(  &   [Out] System.Object^ ModelPathName, &   [Out] System.Object^ ComponentPathName, &   [Out] System.Object^ Feature, &   [Out] System.Object^ DataType, &   [Out] System.Object^ Status, &   [Out] System.Object^ RefEntity, &   [Out] System.Object^ FeatCom, &   [Out] System.int ConfigOption, &   [Out] System.String^ ConfigName ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*ModelPathName*
+:   Array of path names of documents
+
+*ComponentPathName*
+:   Array of path names of referenced components
+
+*Feature*
+:   Array of in-context items (sketches, features, and so on)
+
+*DataType*
+:   Array of the type of data used to create the items (converted edge or face, converted or offset sketch entity, body, and so on)
+
+*Status*
+:   Array of the statuses of the external references as defined in swExternalReferenceStatus\_e
+
+*RefEntity*
+:   Array of the actual items being used and the names of the documents that contain the items
+
+*FeatCom*
+:   Array of the names of the components in which the affected features exist; this information is only displayed when one or more RefEntity is in a different component in an assembly and does not apply to derived parts
+
+*ConfigOption*
+:   Configuration options as defined by swExternalFileReferencesConfig\_e
+
+*ConfigName*
+:   Name of the configuration when configOption is swExternalFileReferencesNamedConfig
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See ModelDocExtension::ListExternalFileReferences.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IModelDocExtension Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension.html)
+
+[IModelDocExtension Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension_members.html)
+
+[IModelDocExtension::IListExternalFileReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~IListExternalFileReferences.html)
+
+[IModelDocExtension::ListExternalFileReferencesCount Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~ListExternalFileReferencesCount.html)
+
+[IModelDocExtension::UpdateExternalFileReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDocExtension~UpdateExternalFileReferences.html)
+
+[IModelDoc2::BreakAllExternalReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~BreakAllExternalReferences.html)
+
+[IModelDoc2::IListAuxiliaryExternalFileReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~IListAuxiliaryExternalFileReferences.html)
+
+[IModelDoc2::ListAuxiliaryExternalFileReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~ListAuxiliaryExternalFileReferences.html)
+
+[IModelDoc2::ListAuxiliaryExternalFileReferencesCount Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~ListAuxiliaryExternalFileReferencesCount.html)
+
+[IModelDoc2::LockAllExternalReferences Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IModelDoc2~LockAllExternalReferences.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2004 FCS, Revision Number 12.0

@@ -1,0 +1,85 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICosmeticWeldBeadFolder.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ICosmeticWeldBeadFolder Interface | |
+| [See Also](#seealsobookmark)  [Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICosmeticWeldBeadFolder_members.html)   [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) : ICosmeticWeldBeadFolder Interface |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Allows access to the properties of cosmetic weld beads.
+
+**NOTE:** Click the **Members** link, located near the top of the topic, to see this interface's methods and properties.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Interface ICosmeticWeldBeadFolder ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICosmeticWeldBeadFolder ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public interface ICosmeticWeldBeadFolder ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public interface class ICosmeticWeldBeadFolder ``` | |
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CosmeticWeldBeadFolder.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Insert Cosmetic Weld Bead (VBA)](Insert_Cosmetic_Weld_Bead_Example_VB.htm)
+
+[Insert Cosmetic Weld Bead (VB.NET)](Insert_Cosmetic_Weld_Bead_Example_VBNET.htm)
+
+[Insert Cosmetic Weld Bead (C#)](Insert_Cosmetic_Weld_Bead_Example_CSharp.htm)
+
+# ![](dotnetimages/collapse.gif)Accessors
+
+[ICosmeticWeldBeadFeatureData::GetWeldBeadFolder](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ICosmeticWeldBeadFeatureData~GetWeldBeadFolder.html)
+
+[IFeature::GetSpecificFeature2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IFeature~GetSpecificFeature2.html)
+
+# ![](dotnetimages/collapse.gif)Access Diagram
+
+[CosmeticWeldBeadFolder](SWObjectModel.pdf#CosmeticWeldBeadFolder)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICosmeticWeldBeadFolder Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ICosmeticWeldBeadFolder_members.html)
+
+[SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html)

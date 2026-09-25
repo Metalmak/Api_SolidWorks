@@ -1,0 +1,110 @@
+<!-- source: sldworksapi/Create_Sketch_Point_Example_VBNET.htm -->
+
+# SOLIDWORKS API Help
+
+# Create a Sketch Point Example (VB.NET)
+
+This example shows how to create a sketch point.
+
+'---------------------------------------------------------------------------
+' Preconditions: Verify that the specified part template exists.
+'
+' Postconditions:
+' 1. Opens a new part document and creates a sketch.
+' 2. Creates a sketch point in the sketch.
+' 3. Examine the graphics area.
+'---------------------------------------------------------------------------
+Imports
+SolidWorks.Interop.sldworks
+Imports
+SolidWorks.Interop.swconst
+Imports
+System.Runtime.InteropServices
+Imports
+System
+
+Partial
+Class
+SolidWorksMacro
+
+    Sub
+main()
+
+        Dim
+swModel As
+ModelDoc2
+        Dim
+swSkMgr As
+SketchManager
+        Dim
+longstatus As
+Integer
+        Dim
+boolstatus As
+Boolean
+
+        swApp.**ResetUntitledCount**(0,
+0, 0)
+        swModel = swApp.**NewDocument**("C:\ProgramData\SOLIDWORKS\SOLIDWORKS
+2012\templates\Part.prtdot", 0, 0, 0)
+        swApp.**ActivateDoc2**("Part1",
+False,
+longstatus)
+        swModel = swApp.**ActiveDoc**
+
+        swSkMgr = swModel.**SketchManager**
+        swSkMgr.**InsertSketch**(True)
+        boolstatus = swModel.**Extension**.**SelectByID2**("Top
+Plane",
+"PLANE", -0.0553489443349025,
+0.00330468607538553, 0.0269617286188933,
+False, 0,
+Nothing, 0)
+        swModel.**ClearSelection2**(True)
+
+        ' Check whether document is active
+        If
+swModel Is
+Nothing
+Then
+            swApp.**SendMsgToUser2**("A
+part document must be active.",
+swMessageBoxIcon\_e.swMbWarning, swMessageBoxBtn\_e.swMbOk)
+            Exit
+Sub
+        End
+If
+
+        '
+Check whether document is a part
+        Dim
+modelType As
+Integer
+        modelType = swModel.**GetType**
+
+        If
+modelType <> swDocumentTypes\_e.swDocPART
+Then
+            swApp.**SendMsgToUser2**("A
+part document must be active.",
+swMessageBoxIcon\_e.swMbWarning, swMessageBoxBtn\_e.swMbOk)
+            Exit
+Sub
+        End
+If
+
+        Dim
+skPoint As
+SketchPoint
+        skPoint = swSkMgr.**CreatePoint**(-0.127443, 0.042892, 0.0#)
+        swSkMgr.**InsertSketch**(True)
+
+    End
+Sub
+
+    Public
+swApp As
+SldWorks
+
+End
+Class

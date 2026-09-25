@@ -1,0 +1,68 @@
+<!-- source: swconst/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swArcEndCondition_e.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Enumerations | Send comments on this topic. |
+| swArcEndCondition\_e Enumeration | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All  Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swconst Namespace](SolidWorks.Interop.swconst~SolidWorks.Interop.swconst_namespace.html) : swArcEndCondition\_e Enumeration |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Arc endpoint conditions for linear dimensions.
+
+# ![](dotnetimages/collapse.gif)Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Enum swArcEndCondition_e     Inherits System.Enum ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As swArcEndCondition_e ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public enum swArcEndCondition_e : System.Enum ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public enum class swArcEndCondition_e : public System.Enum ``` | |
+
+# ![](dotnetimages/collapse.gif)Members
+
+| Member | Description |
+| --- | --- |
+| **swArcEndConditionCenter** | 1 = End point is the center of the arc |
+| **swArcEndConditionMax** | 3 = End point is the furthest point on the arc |
+| **swArcEndConditionMin** | 2 = End point is the nearest point on the arc |
+| **swArcEndConditionNone** | 0 = End point is not related to an arc |
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[SolidWorks.Interop.swconst Namespace](SolidWorks.Interop.swconst~SolidWorks.Interop.swconst_namespace.html)

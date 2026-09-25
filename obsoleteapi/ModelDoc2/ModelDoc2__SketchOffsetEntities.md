@@ -1,0 +1,42 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__SketchOffsetEntities.htm -->
+
+# ModelDoc2::SketchOffsetEntities
+
+This
+method is now obsolete and is now superseded by ModelDoc2::SketchOffsetEntities2.
+
+Description
+
+This method generates entities in the active sketch by offsetting the
+selected geometry by the specified amount.
+
+Syntax (OLE Automation)
+
+void ModelDoc2.SketchOffsetEntities
+( offset, flip)
+
+| Input: | (double) offset | Offset distance in meters |
+| Input: | (BOOL) flip | TRUE if the offset direction should be flipped, FALSE otherwise |
+
+Syntax
+(COM)
+
+status = ModelDoc2->SketchOffsetEntities
+( offset, flip )
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (double) offset | Offset distance in meters |
+| Input: | (VARIANT\_BOOL) flip | TRUE if the offset direction should be flipped, FALSE otherwise |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks
+
+The geometry selected for offset can be an edge,
+loop, face, external sketch curve, external sketch contour, set of edges,
+or set of external sketch curves.
+
+NOTE: If
+the selected geometry is a sketch item, it must be an external sketch
+curve (that is, it cannot be an item in the active sketch). To offset
+sketch segments within the active sketch, use ModelDoc2::SketchOffset.

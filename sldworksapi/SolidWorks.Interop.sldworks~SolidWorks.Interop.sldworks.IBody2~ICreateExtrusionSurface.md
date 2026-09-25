@@ -1,0 +1,105 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~ICreateExtrusionSurface.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ICreateExtrusionSurface Method (IBody2) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IBody2 Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2.html) : ICreateExtrusionSurface Method (IBody2) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*ProfileCurve*
+:   [ICurve](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ICurve.html) object
+
+*AxisDirection*
+:   Array of 3 doubles (x,y,z)
+
+Creates a new surface of extrusion (infinitely long tabulated cylinder).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function ICreateExtrusionSurface( _    ByVal ProfileCurve As Curve, _    ByVal AxisDirection As System.Object _ ) As Surface ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IBody2 Dim ProfileCurve As Curve Dim AxisDirection As System.Object Dim value As Surface   value = instance.ICreateExtrusionSurface(ProfileCurve, AxisDirection) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` Surface ICreateExtrusionSurface(     Curve ProfileCurve,    System.object AxisDirection ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` Surface^ ICreateExtrusionSurface(  &   Curve^ ProfileCurve, &   System.Object^ AxisDirection ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*ProfileCurve*
+:   [ICurve](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ICurve.html) object
+
+*AxisDirection*
+:   Array of 3 doubles (x,y,z)
+
+#### Return Value
+
+[ISurface](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ISurface.html) object
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Body2::ICreateExtrusionSurface.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Imported Surface Body from Sketch (C#)](Create_Imported_Surface_Body_from_Sketch_Example_CSharp.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+You can use this method with:
+
+* A set of related functions that construct a body from trimmed surfaces. The profile curve is extruded along the direction vector of axis direction, the new surface being the envelope of the curve. The profile curve must be of type line, circle, or B-spline curve.
+
+  * Trimming curve creation routines (for example [ISurface::IAddTrimmingLoop2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ISurface~IAddTrimmingLoop2.html)) to construct a trimmed tabulated cylinder.
+
+Any existing object created by this method is destroyed if you call this method again.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IBody2 Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2.html)
+
+[IBody2 Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2_members.html)
+
+[IBody2::CreateExtrusionSurface Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody2~CreateExtrusionSurface.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2001Plus FCS, Revision Number 10.0

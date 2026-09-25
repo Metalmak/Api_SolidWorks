@@ -1,0 +1,101 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData~LineWidth.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| LineWidth Property (ISplineParamData) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ISplineParamData Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData.html) : LineWidth Property (ISplineParamData) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets the line weight used to draw the spline.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` ReadOnly Property LineWidth As System.Integer ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISplineParamData Dim value As System.Integer   value = instance.LineWidth ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.int LineWidth {get;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.int LineWidth {    System.int get(); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Property Value
+
+Line weight as defined in swLineWeights\_e
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See SplineParamData::LineWidth.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Get BCurve Spline Points (C#)](Get_BCurve_Spline_Points_Example_CSharp.htm)
+
+[Get BCurve Spline Points (VB.NET)](Get_BCurve_Spline_Points_Example_VBNET.htm)
+
+[Get BCurve Spline Points (VBA)](Get_BCurve_Spline_Points_Example_VB.htm)
+
+[Get P-Spline Parameterization Data (C#)](Get_P-Spline_Parameterization_Data_Example_CSharp.htm)
+
+[Get P-Spline Parameterization Data (VB.NET)](Get_P-Spline_Parameterization_Data_Example_VBNET.htm)
+
+[Get P-Spline Parameterization Data (VBA)](Get_P-Spline_Parameterization_Data_Example_VB.htm)
+
+[Get Spline's Parameters (C#)](Get_Spline%27s_Parameters_Example_CSharp.htm)
+
+[Get Spline's Parameters (VB.NET)](Get_Spline%27s_Parameters_Example_VBNET.htm)
+
+[Get Spline's Parameters (VBA)](Get_Spline%27s_Parameters_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISplineParamData Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData.html)
+
+[ISplineParamData Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData_members.html)
+
+[ISplineParamData::Color Property](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData~Color.html)
+
+[ISplineParamData::LineStyle Property](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData~LineStyle.html)
+
+[ISplineParamData::LayerOverride Property](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISplineParamData~LayerOverride.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2011 FCS, Revision Number 19.0

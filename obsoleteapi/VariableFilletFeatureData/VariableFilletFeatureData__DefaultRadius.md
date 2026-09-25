@@ -1,0 +1,39 @@
+<!-- source: obsoleteapi/VariableFilletFeatureData/VariableFilletFeatureData__DefaultRadius.htm -->
+
+# VariableFilletFeatureData::DefaultRadius
+
+This
+property is obsolete and has been superseded by VariableFilletFeatureData2::DefaultRadius.
+
+Description
+
+This property gets or sets the variable fillet
+feature default fillet radius.
+
+Syntax (OLE Automation)
+
+radius = VariableFilletFeatureData.DefaultRadius  (VB
+Get property)
+
+VariableFilletFeatureData.DefaultRadius = radius  (VB Set property)
+
+radius
+= VariableFilletFeatureData.GetDefaultRadius ( ) (C++ Get
+property)
+
+VariableFilletFeatureData.SetDefaultRadius ( radius )  (C++ Set property)
+
+| Property: | (double) radius | Default fillet radius of the variable fillet feature |
+
+Syntax (COM)
+
+status = VariableFilletFeatureData ->get\_DefaultRadius
+( &radius )
+
+status = VariableFilletFeatureData ->put\_DefaultRadius
+( radius )
+
+| Property: | (double) radius | Default fillet radius of the variable fillet feature |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks

@@ -1,0 +1,73 @@
+<!-- source: sldworksapi/Create_Exploded_Views_Example_VB.htm -->
+
+# SOLIDWORKS API Help
+
+# Create Exploded Views of an Assembly Example (VBA)
+
+This example shows how to create multiple exploded views of an assembly.
+
+```
+'-------------------------------------------------------------
+' Preconditions: Open an assembly document.
+'
+' Postconditions:
+' 1. Press F5 and inspect the Immediate window.
+' 2. Press F5 and inspect the graphics area at all
+'    subsequent Stop statements.
+'--------------------------------------------------------------
+Option Explicit
+```
+
+Dim swApp As SldWorks.SldWorks
+Dim swModel As SldWorks.ModelDoc2
+Dim swAssembly As SldWorks.AssemblyDoc
+Dim vViewName As Variant
+Dim sViewName As String
+Dim i As Long
+
+Sub main()
+
+    Set swApp = Application.**SldWorks**
+    Set swModel = swApp.**ActiveDoc**
+    Set swAssembly = swModel
+
+    ' Create five exploded views
+        For i = 0 To 4
+            swAssembly.**CreateExplodedView**
+        Next i
+
+        vViewName =
+swAssembly.**GetExplodedViewNames**
+        Debug.Print "Number of exploded views
+created:  " & swAssembly.**GetExplodedViewCount**
+
+        For i = 0 To
+UBound(vViewName)
+            sViewName =
+vViewName(i)
+            Debug.Print "
+Exploded view name: " & sViewName
+        Next i
+
+    Stop
+        For i = 0 To UBound(vViewName)
+            sViewName =
+vViewName(i)
+            Call
+swAssembly.**ShowExploded2**(True, sViewName)
+        Next i
+
+    Stop
+        For i = 0 To UBound(vViewName)
+            sViewName =
+vViewName(i)
+            Call
+swAssembly.**ShowExploded2**(False, sViewName)
+        Next i
+
+    Stop
+        swAssembly.**ViewExplodeAssembly**
+
+    Stop
+        swAssembly.**ViewCollapseAssembly**
+End Sub

@@ -1,0 +1,91 @@
+<!-- source: swmotionstudyapi/SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy.IMotionPlotFeatureOutput~GetYAxis.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Motion Study API Help | Send comments on this topic. |
+| GetYAxis Method (IMotionPlotFeatureOutput) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swmotionstudy Namespace](SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy_namespace.html) > [IMotionPlotFeatureOutput Interface](SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy.IMotionPlotFeatureOutput.html) : GetYAxis Method (IMotionPlotFeatureOutput) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*YAxisFeatureData*
+:   y-axis feature data
+
+Gets a plot's y-axis values.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetYAxis( _    ByVal YAxisFeatureData As System.Object _ ) As System.Object ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IMotionPlotFeatureOutput Dim YAxisFeatureData As System.Object Dim value As System.Object   value = instance.GetYAxis(YAxisFeatureData) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.object GetYAxis(     System.object YAxisFeatureData ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.Object^ GetYAxis(  &   System.Object^ YAxisFeatureData ) ``` | |
+
+#### Parameters
+
+*YAxisFeatureData*
+:   y-axis feature data
+
+#### Return Value
+
+Array of doubles of the plot's y-axis values
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See MotionPlotFeatureOutput::GetYAxis.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Plots and Get Values (C#)](Create_Plots_and_Get_Values_Example_CSharp.htm)
+
+[Create Plots and Get Values (VB.NET)](Create_Plots_and_Get_Values_Example_VBNET.htm)
+
+[Create Plots and Get Values (VBA)](Create_Plots_and_Get_Values_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IMotionPlotFeatureOutput Interface](SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy.IMotionPlotFeatureOutput.html)
+
+[IMotionPlotFeatureOutput Members](SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy.IMotionPlotFeatureOutput_members.html)
+
+[IMotionPlotFeatureOutput::GetXAxis Method](SolidWorks.Interop.swmotionstudy~SolidWorks.Interop.swmotionstudy.IMotionPlotFeatureOutput~GetXAxis.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2011 FCS, Revision Number 19.0

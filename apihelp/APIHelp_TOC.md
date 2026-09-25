@@ -1,0 +1,55 @@
+<!-- source: apihelp/APIHelp.hhc -->
+
+# Table of Contents
+
+- **API Help Overview**
+  - [Welcome to API Help](Welcome_to_API_Help.md)
+  - **Using API Help **
+    - [Access and Navigation](Access_and_Navigation.md)
+    - [Syntax Conventions](Syntax_Conventions.md)
+    - [Obsolete APIs](Obsolete_SolidWorks_APIs.md)
+    - [Resources](Resources.md)
+    - [Contacting API Support](ContactingAPISupport/Contacting_API_Support.md)
+- **SOLIDWORKS API Help**
+- [sldworksAPIProgGuide](../sldworksapiprogguide/sldworksAPIProgGuide_TOC.md)
+  - **SOLIDWORKS APIs**
+  - [sldworksAPI](../sldworksapi/sldworksapi_TOC.md)
+  - [swmotionstudyapi](../swmotionstudyapi/swmotionstudyapi_TOC.md)
+  - [swdimxpertapi](../swdimxpertapi/swdimxpertapi_TOC.md)
+  - [swpublishedapi](../swpublishedapi/swpublishedapi_TOC.md)
+  - [sw3dprinterapi](../sw3dprinterapi/sw3dprinterapi_TOC.md)
+  - [dsgnchkapi](../dsgnchkapi/dsgnchkapi_TOC.md)
+  - [swhtmlcontrolapi](../swhtmlcontrolapi/swhtmlcontrolapi_TOC.md)
+  - [swscanto3dapi](../swscanto3dapi/swscanto3dapi_TOC.md)
+  - **SOLIDWORKS Enumerations**
+  - [swconst](../swconst/swconst_TOC.md)
+  - [swcommands](../swcommands/swcommands_TOC.md)
+- **FeatureWorks API Help**
+- [fworksapi](../fworksapi/fworksapi_TOC.md)
+- **SOLIDWORKS Costing API Help**
+- [swcostingapi](../swcostingapi/swcostingapi_TOC.md)
+- **SOLIDWORKS Document Manager API Help**
+- [swdocmgrapi](../swdocmgrapi/swdocmgrapi_TOC.md)
+- **SOLIDWORKS Inspection API Help**
+- [swinspectionapi](../swinspectionapi/swinspectionapi_TOC.md)
+- **SOLIDWORKS OEM API Help**
+- [sldworksoemapi](../sldworksoemapi/sldworksoemapi_TOC.md)
+- **SOLIDWORKS PDM Professional API Help**
+- [epdmapi](../epdmapi/epdmapi_TOC.md)
+- **SOLIDWORKS PDM Professional Web API Help**
+- [PDMProWebAPIHelp](../pdmprowebapihelp/PDMProWebAPIHelp_TOC.md)
+- **SOLIDWORKS Routing API Help**
+- [routingapi](../routingapi/routingapi_TOC.md)
+- **SOLIDWORKS Simulation API Help**
+- [cworksapi](../cworksapi/cworksapi_TOC.md)
+- **SOLIDWORKS Sustainability API Help**
+- [sustainabilityapi](../sustainabilityapi/sustainabilityapi_TOC.md)
+- **SOLIDWORKS Toolbox Browser API Help**
+- [toolboxapi](../toolboxapi/toolboxapi_TOC.md)
+- **SOLIDWORKS Utilities API Help**
+- [swutilitiesapi](../swutilitiesapi/swutilitiesapi_TOC.md)
+- **eDrawings API Help**
+- [emodelapi](../emodelapi/eModelAPI_TOC.md)
+- **Examples, Sample Projects, and Tips**
+  - [SOLIDWORKS API Examples, Sample Projects, and Tips ](SampleProjectsExamplesTips/SolidWorks_API_Examples.md)
+  - [eDrawings API Sample Project](SampleProjectsExamplesTips/SolidWorks_eDrawings_API_Sample_Project.md)

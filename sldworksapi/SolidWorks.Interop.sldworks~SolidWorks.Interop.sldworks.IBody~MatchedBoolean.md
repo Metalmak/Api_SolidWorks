@@ -1,0 +1,93 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody~MatchedBoolean.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| MatchedBoolean Method (IBody) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IBody Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody.html) : MatchedBoolean Method (IBody) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*OperationType*
+
+*ToolBody*
+
+*NumOfMatchingFaces*
+
+*FaceList1*
+
+*FaceList2*
+
+*ErrorCode*
+
+Obsolete. Superseded by [IBody2::MatchedBoolean3](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IBody2~MatchedBoolean3.html).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function MatchedBoolean( _    ByVal OperationType As System.Integer, _    ByVal ToolBody As System.Object, _    ByVal NumOfMatchingFaces As System.Integer, _    ByVal FaceList1 As System.Object, _    ByVal FaceList2 As System.Object, _    ByRef ErrorCode As System.Integer _ ) As System.Object ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IBody Dim OperationType As System.Integer Dim ToolBody As System.Object Dim NumOfMatchingFaces As System.Integer Dim FaceList1 As System.Object Dim FaceList2 As System.Object Dim ErrorCode As System.Integer Dim value As System.Object   value = instance.MatchedBoolean(OperationType, ToolBody, NumOfMatchingFaces, FaceList1, FaceList2, ErrorCode) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.object MatchedBoolean(     System.int OperationType,    System.object ToolBody,    System.int NumOfMatchingFaces,    System.object FaceList1,    System.object FaceList2,    out System.int ErrorCode ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.Object^ MatchedBoolean(  &   System.int OperationType, &   System.Object^ ToolBody, &   System.int NumOfMatchingFaces, &   System.Object^ FaceList1, &   System.Object^ FaceList2, &   [Out] System.int ErrorCode ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*OperationType*
+
+*ToolBody*
+
+*NumOfMatchingFaces*
+
+*FaceList1*
+
+*FaceList2*
+
+*ErrorCode*
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Body::MatchedBoolean.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IBody Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody.html)
+
+[IBody Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IBody_members.html)

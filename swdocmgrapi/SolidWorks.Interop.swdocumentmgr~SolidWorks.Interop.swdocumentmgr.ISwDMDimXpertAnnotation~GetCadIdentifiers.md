@@ -1,0 +1,79 @@
+<!-- source: swdocmgrapi/SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertAnnotation~GetCadIdentifiers.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Document Manager API Help | Send comments on this topic. |
+| GetCadIdentifiers Method (ISwDMDimXpertAnnotation) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swdocumentmgr Namespace](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr_namespace.html) > [ISwDMDimXpertAnnotation Interface](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertAnnotation.html) : GetCadIdentifiers Method (ISwDMDimXpertAnnotation) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets all of the CAD identifiers of this DimXpert annotation.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetCadIdentifiers() As System.Object ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISwDMDimXpertAnnotation Dim value As System.Object   value = instance.GetCadIdentifiers() ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.object GetCadIdentifiers() ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.Object^ GetCadIdentifiers(); ``` | |
+
+#### Return Value
+
+Array of strings; the format of each string is bodyid:faceid
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See SwDMDimXpertAnnotation::GetCadIdentifiers.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the examples on the interface page.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISwDMDimXpertAnnotation Interface](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertAnnotation.html)
+
+[ISwDMDimXpertAnnotation Members](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertAnnotation_members.html)
+
+[ISwDMDimXpertAnnotation::IGetCadIdentifiers Method](SolidWorks.Interop.swdocumentmgr~SolidWorks.Interop.swdocumentmgr.ISwDMDimXpertAnnotation~IGetCadIdentifiers.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2010 FCS, Revision Number 18.0

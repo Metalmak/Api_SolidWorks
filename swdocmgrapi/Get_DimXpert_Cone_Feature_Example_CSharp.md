@@ -1,0 +1,59 @@
+<!-- source: swdocmgrapi/Get_DimXpert_Cone_Feature_Example_CSharp.htm -->
+
+# SOLIDWORKS Document Manager API Help
+
+# Get DimXpert Cone Feature Example (C#)
+
+This example builds a part to demonstrate usage of the
+SOLIDWORKS Document Manager API for the following DimXpert entities:
+
+   \*
+ Cone feature
+
+   \*
+ Cone angle
+dimension tolerance
+
+//-----------------------------------------------------------------------------
+
+// 1.
+Open *public\_documents***\samples\tutorial\api\shaft.sldprt**.
+
+// 2.
+Open the DimXpert toolbar from **View > Toolbars** (select the
+
+//    first instance
+of Toolbars on the View menu).
+
+// 3.
+Click **Auto Dimension Scheme** on the DimXpert toolbar.
+
+// 4.
+Ensure that the Cone Feature Filter is selected.
+
+// 5.
+Click the green check mark to accept the settings.
+
+// 6.
+Observe the following DimXpert features on the
+
+//    DimXpertManager tab:  **Cone1**
+and
+**ConeAngle1**
+
+// 7.
+Close the part, saving it to another name.
+
+//    NOTE:
+Because this part is used in a SOLIDWORKS online
+
+//          tutorial, do not save
+any changes to the original
+
+//          file name.
+
+// 8.
+Read how to load and run [Code\_Example\_CSharp](Code_Example_CSharp.htm)
+with this part.
+
+//-------------------------------------------------------------------------------

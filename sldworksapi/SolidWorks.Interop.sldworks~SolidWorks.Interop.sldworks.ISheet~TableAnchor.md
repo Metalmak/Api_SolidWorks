@@ -1,0 +1,93 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet~TableAnchor.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| TableAnchor Property (ISheet) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ISheet Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet.html) : TableAnchor Property (ISheet) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*TableType*
+:   Table type as defined in swTableAnnotationType\_e
+
+Gets the specified table anchor.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` ReadOnly Property TableAnchor( _    ByVal TableType As System.Integer _ ) As TableAnchor ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISheet Dim TableType As System.Integer Dim value As TableAnchor   value = instance.TableAnchor(TableType) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` TableAnchor TableAnchor(     System.int TableType ) {get;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property TableAnchor^ TableAnchor {    TableAnchor^ get(System.int TableType); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*TableType*
+:   Table type as defined in swTableAnnotationType\_e
+
+#### Property Value
+
+[Table anchor](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ITableAnchor.html)
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Sheet::TableAnchor.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Get and Set Table Anchor of Hole Table (C#)](Get_and_Set_Table_Anchor_of_Hole_Table_Example_CSharp.htm)
+
+[Get and Set Table Anchor of Hole Table (VB.NET)](Get_and_Set_Table_Anchor_of_Hole_Table_Example_VBNET.htm)
+
+[Get and Set Table Anchor of Hole Table (VBA)](Get_and_Set_Table_Anchor_of_Hole_Table_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISheet Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet.html)
+
+[ISheet Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet_members.html)
+
+[ISheet::SetAsTableAnchor Method ()](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISheet~SetAsTableAnchor.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2006 FCS, Revision Number 14.0

@@ -1,0 +1,73 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData_properties.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| IWizardHoleFeatureData Interface Properties | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) : IWizardHoleFeatureData Interface |
+
+For a list of all members of this type, see [IWizardHoleFeatureData members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData_members.html).
+
+# ![](dotnetimages/collapse.gif)Public Properties
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![ Property](dotnetimages/Property.gif) | [CounterBoreDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterBoreDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterBoreDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterBoreDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterBoreDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterBoreDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterBoreDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterBoreDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterDrillAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterDrillAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterDrillAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterDrillAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterDrillDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterDrillDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterDrillDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterDrillDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterDrillDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterDrillDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterDrillDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterDrillDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterSinkAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterSinkAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterSinkAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterSinkAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [CounterSinkDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~CounterSinkDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::CounterSinkDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~CounterSinkDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [Depth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Depth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Depth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Depth.html). |
+| ![ Property](dotnetimages/Property.gif) | [Diameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Diameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Diameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Diameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [DrillAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~DrillAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::DrillAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~DrillAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [EndCondition](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~EndCondition.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::EndCondition](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~EndCondition.html). |
+| ![ Property](dotnetimages/Property.gif) | [Face](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Face.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Face](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Face.html). |
+| ![ Property](dotnetimages/Property.gif) | [FarCounterSinkAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~FarCounterSinkAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::FarCounterSinkAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~FarCounterSinkAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [FarCounterSinkDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~FarCounterSinkDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::FarCounterSinkDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~FarCounterSinkDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [FastenerSize](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~FastenerSize.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::FastenerSize](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~FastenerSize.html).  **NOTE:** **This property is a get-only property.** **Set is not implemented**. |
+| ![ Property](dotnetimages/Property.gif) | [FastenerType](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~FastenerType.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::FastenerType2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~FastenerType2.html).  **NOTE:** **This property is a get-only property.** **Set is not implemented**. |
+| ![ Property](dotnetimages/Property.gif) | [HeadClearance](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~HeadClearance.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::HeadClearance](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~HeadClearance.html). |
+| ![ Property](dotnetimages/Property.gif) | [HoleDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~HoleDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::HoleDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~HoleDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [HoleDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~HoleDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::HoleDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~HoleDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [IFace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~IFace.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::IFace](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~IFace.html). |
+| ![ Property](dotnetimages/Property.gif) | [IVertex](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~IVertex.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::IVertex](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~IVertex.html). |
+| ![ Property](dotnetimages/Property.gif) | [MajorDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~MajorDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::MajorDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~MajorDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [MidCounterSinkAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~MidCounterSinkAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::MidCounterSinkAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~MidCounterSinkAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [MidCounterSinkDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~MidCounterSinkDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::MidCounterSinkDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~NearCounterSinkDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [MinorDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~MinorDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::MinorDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~MinorDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [NearCounterSinkAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~NearCounterSinkAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::NearCounterSinkAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~NearCounterSinkAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [NearCounterSinkDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~NearCounterSinkDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::NearCounterSinkDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~NearCounterSinkDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [Standard](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Standard.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Standard2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Standard2.html).  **NOTE:** **This property is a get-only property.** **Set is not implemented**. |
+| ![ Property](dotnetimages/Property.gif) | [TapDrillDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~TapDrillDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::TapDrillDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~TapDrillDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [TapDrillDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~TapDrillDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::TapDrillDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~TapDrillDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThreadAngle](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThreadAngle.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThreadAngle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThreadAngle.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThreadDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThreadDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThreadDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThreadDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThreadDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThreadDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThreadDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThreadDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThruHoleDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThruHoleDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThruHoleDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThruHoleDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThruHoleDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThruHoleDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThruHoleDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThruHoleDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThruTapDrillDepth](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThruTapDrillDepth.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThruTapDrillDepth](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThruTapDrillDepth.html). |
+| ![ Property](dotnetimages/Property.gif) | [ThruTapDrillDiameter](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~ThruTapDrillDiameter.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::ThruTapDrillDiameter](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~ThruTapDrillDiameter.html). |
+| ![ Property](dotnetimages/Property.gif) | [Type](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Type.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Type](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Type.html). |
+| ![ Property](dotnetimages/Property.gif) | [Vertex](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData~Vertex.html) | Obsolete. Superseded by [IWizardHoleFeatureData2::Vertex](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IWizardHoleFeatureData2~Vertex.html). |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IWizardHoleFeatureData Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IWizardHoleFeatureData.html)
+
+[SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html)

@@ -1,0 +1,57 @@
+<!-- source: toolboxapi/toolboxapi.hhc -->
+
+# Table of Contents
+
+- [Welcome](Welcome-toolboxapi.md)
+- [Release Notes](ReleaseNotes-toolboxapi.md)
+- [Getting Started](GettingStarted-toolboxapi.md)
+- **SolidWorks.Interop.sldtoolboxconfigureaddin Namespace**
+  - [Overview](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin_namespace.md)
+  - **Interfaces**
+    - [IToolboxConfiguratorAddin](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin.md)
+      - [Overview](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin.md)
+      - [Members](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin_members.md)
+      - [Methods](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin_methods.md)
+        - [Connect Method](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin~Connect.md)
+        - [Disconnect Method](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolboxConfiguratorAddin~Disconnect.md)
+    - [IToolBoxConfiguratorApplication](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication.md)
+      - [Overview](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication.md)
+      - [Members](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication_members.md)
+      - [Methods](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication_methods.md)
+        - [GetHWnd Method](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication~GetHWnd.md)
+        - [GetHWnd64 Method](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication~GetHWnd64.md)
+        - [SendMessageToUser Method](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication~SendMessageToUser.md)
+      - [Properties](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication_properties.md)
+        - [MajorVersion Property](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication~MajorVersion.md)
+        - [PDMDocManager Property](SolidWorks.Interop.sldtoolboxconfigureaddin~SolidWorks.Interop.sldtoolboxconfigureaddin.IToolBoxConfiguratorApplication~PDMDocManager.md)
+- **SolidWorks.Interop.swbrowser Namespace**
+  - [Overview](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser_namespace.md)
+  - **Interfaces**
+    - [IApplication](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication.md)
+      - [Overview](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication.md)
+      - [Members](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication_members.md)
+      - [Properties](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication_properties.md)
+        - [MajorVersion Property](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication~MajorVersion.md)
+        - [PDMDocManager Property](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IApplication~PDMDocManager.md)
+    - [IPDMDocManager](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager.md)
+      - [Overview](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager.md)
+      - [Members](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager_members.md)
+      - [Methods](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager_methods.md)
+        - [SetCancelOperation Method](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager~SetCancelOperation.md)
+        - [SetDocumentStatus Method](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager~SetDocumentStatus.md)
+        - [SetManagedDocument Method](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.IPDMDocManager~SetManagedDocument.md)
+  - **Enumerations**
+    - [swApplicationEvents_e](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.swApplicationEvents_e.md)
+    - [swPDMDocManagerEvents_e](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.swPDMDocManagerEvents_e.md)
+    - [swPDMStatus_e](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.swPDMStatus_e.md)
+  - **Delegates**
+    - [DApplicationEvents_DestroyEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DApplicationEvents_DestroyEventHandler.md)
+    - [DPDMDocManagerEvents_AfterCopyingDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_AfterCopyingDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_AfterDeletingDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_AfterDeletingDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_AfterWritingToDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_AfterWritingToDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_BeforeCopyingDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_BeforeCopyingDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_BeforeDeletingDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_BeforeDeletingDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_BeforeWritingToDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_BeforeWritingToDocumentEventHandler.md)
+    - [DPDMDocManagerEvents_DestroyEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_DestroyEventHandler.md)
+    - [DPDMDocManagerEvents_NewDocumentAddedEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_NewDocumentAddedEventHandler.md)
+    - [DPDMDocManagerEvents_PreInsertDocumentEventHandler](SolidWorks.Interop.swbrowser~SolidWorks.Interop.swbrowser.DPDMDocManagerEvents_PreInsertDocumentEventHandler.md)

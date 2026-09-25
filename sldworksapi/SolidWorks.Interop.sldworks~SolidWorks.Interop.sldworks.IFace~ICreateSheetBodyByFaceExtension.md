@@ -1,0 +1,77 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace~ICreateSheetBodyByFaceExtension.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ICreateSheetBodyByFaceExtension Method (IFace) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IFace Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace.html) : ICreateSheetBodyByFaceExtension Method (IFace) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*BoxLowIn*
+
+*BoxHighIn*
+
+Obsolete. Superseded by [IFace2::ICreateSheetBodyByFaceExtension](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IFace2~ICreateSheetBodyByFaceExtension.html).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function ICreateSheetBodyByFaceExtension( _    ByRef BoxLowIn As System.Double, _    ByRef BoxHighIn As System.Double _ ) As Body ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IFace Dim BoxLowIn As System.Double Dim BoxHighIn As System.Double Dim value As Body   value = instance.ICreateSheetBodyByFaceExtension(BoxLowIn, BoxHighIn) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` Body ICreateSheetBodyByFaceExtension(     ref System.double BoxLowIn,    ref System.double BoxHighIn ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` Body^ ICreateSheetBodyByFaceExtension(  &   System.double% BoxLowIn, &   System.double% BoxHighIn ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*BoxLowIn*
+
+*BoxHighIn*
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Face::ICreateSheetBodyByFaceExtension.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IFace Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace.html)
+
+[IFace Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IFace_members.html)

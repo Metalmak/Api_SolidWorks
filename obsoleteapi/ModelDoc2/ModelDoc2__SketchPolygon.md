@@ -1,0 +1,45 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__SketchPolygon.htm -->
+
+# ModelDoc2::SketchPolygon
+
+This method is obsolete and has been superseded
+by SketchManager::CreatePolygon.
+
+Description
+
+This method creates a polygon in the active
+sketch.
+
+Syntax (OLE Automation)
+
+retval = ModelDoc2.SketchPolygon ( xCenter, yCenter, xEdge, yEdge, nSides, bInscribed )
+
+| Input: | (double) xCenter | X component of the polygon's center |
+| Input: | (double) yCenter | Y component of the polygon's center |
+| Input: | (double) xEdge | X component of the first vertex on the polygon |
+| Input: | (double) yEdge | Y component of the first vertex on the polygon |
+| Input: | (int) nSides | Number of sides for the polygon |
+| Input: | (BOOL) bInscribed | TRUE to show an inscribed construction circle, FALSE to show a circumscribed construction circle |
+| Return: | (BOOL) retval | TRUE if polygon created, FALSE if not |
+
+Syntax (COM)
+
+status = ModelDoc2->SketchPolygon ( double xCenter,
+double yCenter, double xEdge, double yEdge, int nSides, VARIANT\_BOOL\*
+retval )
+
+| Input: | (double) xCenter | X component of the polygon's center |
+| Input: | (double) yCenter | Y component of the polygon's center |
+| Input: | (double) xEdge | X component of the first vertex on the polygon |
+| Input: | (double) yEdge | Y component of the first vertex on the polygon |
+| Input: | (int) nSides | Number of sides for the polygon |
+| Input: | (BOOL) bInscribed | TRUE to show an inscribed construction circle, FALSE to show a circumscribed construction circle. |
+| Output: | (VARIANT\_BOOL) retval | TRUE if polygon created, FALSE if not |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks
+
+After using this method, the PropertyManager page
+is in edit mode for the polygon. To exit this PropertyManager page and
+complete the operation, use ModelDoc2::SetPickMode, ModelDoc2::ClearSelection2,
+or exit the sketch.

@@ -1,0 +1,89 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageLabel~Font.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| Font Property (IPropertyManagerPageLabel) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IPropertyManagerPageLabel Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageLabel.html) : Font Property (IPropertyManagerPageLabel) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*StartChar*
+:   0-based index value of start character
+
+*EndChar*
+:   0-based index value of end character
+
+Gets or sets the font for the specified characters in this PropertyManager label.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property Font( _    ByVal StartChar As System.Short, _    ByVal EndChar As System.Short _ ) As System.String ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IPropertyManagerPageLabel Dim StartChar As System.Short Dim EndChar As System.Short Dim value As System.String   instance.Font(StartChar, EndChar) = value   value = instance.Font(StartChar, EndChar) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.string Font(     System.short StartChar,    System.short EndChar ) {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.String^ Font {    System.String^ get(System.short StartChar, System.short EndChar);    void set (System.short StartChar, System.short EndChar, System.String^ value); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*StartChar*
+:   0-based index value of start character
+
+*EndChar*
+:   0-based index value of end character
+
+#### Property Value
+
+Name of the font to use for the specified characters
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See PropertyManagerPageLabel::Font.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IPropertyManagerPageLabel Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageLabel.html)
+
+[IPropertyManagerPageLabel Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPropertyManagerPageLabel_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2008 FCS, Revision Number 16.0

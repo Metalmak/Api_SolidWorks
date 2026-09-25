@@ -1,0 +1,87 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~SetVisible.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| SetVisible Method (IView) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IView Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView.html) : SetVisible Method (IView) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*Visible*
+:   True to set the view to visible, false to not
+
+*DependentsToo*
+:   True to set the dependents of this view to visible, false to not
+
+Sets the visibility of this drawing view.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Sub SetVisible( _    ByVal Visible As System.Boolean, _    ByVal DependentsToo As System.Boolean _ ) ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IView Dim Visible As System.Boolean Dim DependentsToo As System.Boolean   instance.SetVisible(Visible, DependentsToo) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` void SetVisible(     System.bool Visible,    System.bool DependentsToo ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` void SetVisible(  &   System.bool Visible, &   System.bool DependentsToo ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*Visible*
+:   True to set the view to visible, false to not
+
+*DependentsToo*
+:   True to set the dependents of this view to visible, false to not
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See View::SetVisible.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IView Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView.html)
+
+[IView Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView_members.html)
+
+[IView::GetVisible Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IView~GetVisible.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2001 FCS, Revision Number 10.0

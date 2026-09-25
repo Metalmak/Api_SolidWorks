@@ -1,0 +1,123 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenFileName.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| GetOpenFileName Method (ISldWorks) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ISldWorks Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks.html) : GetOpenFileName Method (ISldWorks) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*DialogTitle*
+:   Title of the dialog
+
+*InitialFileName*
+:   Path and file name of the file to open
+
+*FileFilter*
+:   File name extension of the file to open
+
+*OpenOptions*
+:   Not used
+
+*ConfigName*
+:   Name of the configuration
+
+*DisplayName*
+:   Recommended file name to use
+
+Obsolete. Superseded by [ISldWorks::GetOpenFileName2](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenFileName2.html).
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetOpenFileName( _    ByVal DialogTitle As System.String, _    ByVal InitialFileName As System.String, _    ByVal FileFilter As System.String, _    ByRef OpenOptions As System.Integer, _    ByRef ConfigName As System.String, _    ByRef DisplayName As System.String _ ) As System.String ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISldWorks Dim DialogTitle As System.String Dim InitialFileName As System.String Dim FileFilter As System.String Dim OpenOptions As System.Integer Dim ConfigName As System.String Dim DisplayName As System.String Dim value As System.String   value = instance.GetOpenFileName(DialogTitle, InitialFileName, FileFilter, OpenOptions, ConfigName, DisplayName) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.string GetOpenFileName(     System.string DialogTitle,    System.string InitialFileName,    System.string FileFilter,    out System.int OpenOptions,    out System.string ConfigName,    out System.string DisplayName ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.String^ GetOpenFileName(  &   System.String^ DialogTitle, &   System.String^ InitialFileName, &   System.String^ FileFilter, &   [Out] System.int OpenOptions, &   [Out] System.String^ ConfigName, &   [Out] System.String^ DisplayName ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*DialogTitle*
+:   Title of the dialog
+
+*InitialFileName*
+:   Path and file name of the file to open
+
+*FileFilter*
+:   File name extension of the file to open
+
+*OpenOptions*
+:   Not used
+
+*ConfigName*
+:   Name of the configuration
+
+*DisplayName*
+:   Recommended file name to use
+
+#### Return Value
+
+Path and file name of the file to open
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See SldWorks::GetOpenFileName.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISldWorks Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks.html)
+
+[ISldWorks Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_members.html)
+
+[ISldWorks::EnumDocuments2 Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~EnumDocuments2.html)
+
+[ISldWorks::GetOpenDocument Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenDocument.html)
+
+[ISldWorks::GetOpenDocumentByName Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenDocumentByName.html)
+
+[ISldWorks::GetOpenedFileInfo Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetOpenedFileInfo.html)
+
+[ISldWorks::IGetOpenDocumentByName2 Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~IGetOpenDocumentByName2.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2005 FCS, Revision Number 13.0

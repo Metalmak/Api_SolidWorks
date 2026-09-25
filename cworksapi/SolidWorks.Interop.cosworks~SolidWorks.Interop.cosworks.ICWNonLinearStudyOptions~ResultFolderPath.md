@@ -1,0 +1,82 @@
+<!-- source: cworksapi/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWNonLinearStudyOptions~ResultFolderPath.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Simulation API Help | Send comments on this topic. |
+| ResultFolderPath Property (ICWNonLinearStudyOptions) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html) > [ICWNonLinearStudyOptions Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWNonLinearStudyOptions.html) : ResultFolderPath Property (ICWNonLinearStudyOptions) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets or sets the path name of the folder that stores the results of this
+study.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property ResultFolderPath As System.String ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICWNonLinearStudyOptions Dim value As System.String   instance.ResultFolderPath = value   value = instance.ResultFolderPath ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.string ResultFolderPath {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.String^ ResultFolderPath {    System.String^ get();    void set ( &   System.String^ value); } ``` | |
+
+#### Property Value
+
+Path name of the results folder
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CWNonLinearStudyOptions::ResultFolderPath.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the [ICWNonLinearStudyOptions](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWNonLinearStudyOptions.html) examples.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+Make sure that the disk where the specified folder is located has adequate free disk space for the analysis results.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICWNonLinearStudyOptions Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWNonLinearStudyOptions.html)
+
+[ICWNonLinearStudyOptions Members](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWNonLinearStudyOptions_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS Simulation API 2008 SP1.0

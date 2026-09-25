@@ -1,0 +1,49 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion_members.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| ISketchRegion Interface Members | |
+| [See Also](#seealsobookmark)  [Properties](#PropertiesBookmark)  [Methods](#MethodsBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) : ISketchRegion Interface |
+
+The following tables list the members exposed by [ISketchRegion](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion.html).
+
+# ![](dotnetimages/collapse.gif)Public Properties
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![ Property](dotnetimages/Property.gif) | [Sketch](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~Sketch.html) | Gets the sketch for this sketch region. |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)Public Methods
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![ Method](dotnetimages/Method.gif) | [DeSelect](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~DeSelect.html) | Deselects the sketch region. |
+| ![ Method](dotnetimages/Method.gif) | [GetEdges](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~GetEdges.html) | Gets the edges on this sketch region. |
+| ![ Method](dotnetimages/Method.gif) | [GetEdgesCount](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~GetEdgesCount.html) | Gets the number of edges for this sketch region. |
+| ![ Method](dotnetimages/Method.gif) | [GetFirstLoop](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~GetFirstLoop.html) | Gets the first loop in this sketch region. |
+| ![ Method](dotnetimages/Method.gif) | [IGetEdges](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~IGetEdges.html) | Gets the edges on this sketch region. |
+| ![ Method](dotnetimages/Method.gif) | [Select](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~Select.html) | Obsolete. Superseded by [ISketchRegion::Select2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ISketchRegion~Select2.html). |
+| ![ Method](dotnetimages/Method.gif) | [Select2](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion~Select2.html) | Selects the sketch region and marks it. |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISketchRegion Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISketchRegion.html)
+
+[SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html)

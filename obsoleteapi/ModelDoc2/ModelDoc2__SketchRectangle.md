@@ -1,0 +1,39 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__SketchRectangle.htm -->
+
+# ModelDoc2::SketchRectangle
+
+This method is obsolete and has been superseded
+by SketchManager::CreateCornerRectangle.
+
+Description
+
+This method creates a rectangle.
+
+Syntax (OLE Automation)
+
+void ModelDoc2.SketchRectangle ( val1,
+val2, z1, val3, val4, z2, val5)
+
+| Input: | (double) val1 | Upper-left x value in meters |
+| Input: | (double) val2 | Upper-left y value in meters |
+| Input: | (double) z1 | Upper-left z value in meters |
+| Input: | (double) val3 | Lower-right x value in meters |
+| Input: | (double) val4 | Lower-right y value in meters |
+| Input: | (double) z2 | Lower-right z value in meters |
+| Input: | (BOOL) val5 | Not used |
+
+Syntax (COM)
+
+status = ModelDoc2->SketchRectangle
+( val1, val2, z1, val3, val4, z2, val5 )
+
+| Input: | (double) val1 | Uppe-left x value in meters |
+| Input: | (double) val2 | Upper-left y value in meters |
+| Input: | (double) z1 | Upper-left z value in meters |
+| Input: | (double) val3 | Lower-right x value in meters |
+| Input: | (double) val4 | Lower-right y value in meters |
+| Input: | (double) z2 | Lower-right z value in meters |
+| Input: | (VARIANT\_BOOL) val5 | Not used |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks

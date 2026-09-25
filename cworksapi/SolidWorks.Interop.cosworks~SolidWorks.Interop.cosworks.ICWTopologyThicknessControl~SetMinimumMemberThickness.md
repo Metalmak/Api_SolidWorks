@@ -1,0 +1,85 @@
+<!-- source: cworksapi/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl~SetMinimumMemberThickness.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Simulation API Help | Send comments on this topic. |
+| SetMinimumMemberThickness Method (ICWTopologyThicknessControl) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html) > [ICWTopologyThicknessControl Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl.html) : SetMinimumMemberThickness Method (ICWTopologyThicknessControl) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*DThickness*
+:   Minimum member thickness
+
+Sets the minimum member thickness for this topology study thickness manufacturing control.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Sub SetMinimumMemberThickness( _    ByVal DThickness As System.Double _ ) ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ICWTopologyThicknessControl Dim DThickness As System.Double   instance.SetMinimumMemberThickness(DThickness) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` void SetMinimumMemberThickness(     System.double DThickness ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` void SetMinimumMemberThickness(  &   System.double DThickness ) ``` | |
+
+#### Parameters
+
+*DThickness*
+:   Minimum member thickness
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See CWTopologyThicknessControl::SetMinimumMemberThickness.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the [ICWTopologyThicknessControl](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl.html) example.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This method is valid only if [ICWTopologyThicknessControl::SetIncludeMinMemberThickness](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl~SetIncludeMinMemberThickness.html) sets BFlag to true.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ICWTopologyThicknessControl Interface](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl.html)
+
+[ICWTopologyThicknessControl Members](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.ICWTopologyThicknessControl_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS Simulation API 2019 SP0

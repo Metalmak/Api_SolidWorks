@@ -1,0 +1,88 @@
+<!-- source: swconst/SO_FileLocations.htm -->
+
+# SOLIDWORKS API Help
+
+# System Options > File Locations
+
+This topic contains two tables. The information in the table:
+
+* appearing immediately after the screen capture
+  of the dialog corresponds to the settings
+  on that dialog.
+* titled [Obsolete
+  Enumerators](#Obsolete) contains enumerators that previously appeared on
+  the dialog but are now obsolete.
+
+![](SO_FileLocations.gif)
+
+| Setting | Get/Set Methods | Return Value  or  <Value> | Comment |
+| Show folders for - Document Templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDocumentTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDocumentTemplates, <Value>) | String value |  |
+| Show folders for - Referenced Documents - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDocuments)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDocuments, <Value>) | String value |  |
+| Show folders for - Default Save Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDefaultSave)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDefaultSave, <Value>) | String value |  |
+| Show folders for - Bend Table Template - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendTableTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendTableTemplate, <Value>) | String value |  |
+| Show folders for - Blocks - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBlocks)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBlocks, <Value>) | String value |  |
+| Show folders for - BOM Templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBOMTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBOMTemplates, <Value>) | String value |  |
+| Show folders for - Color Swatches - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsColorSwatches)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsColorSwatches, <Value>) | String value |  |
+| Show folders for - Costing Report Template Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCostingReportTemplateFolder)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCostingReportTemplateFolder, <Value>) | String value |  |
+| Show folders for - Costing templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCostingTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCostingTemplates, <Value>) | String value |  |
+| Show folders for - Custom - Appearances - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomAppearances)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomAppearances, <Value>) | String Value |  |
+| Show folders for - Custom - Decals - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomDecals)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomDecals, <Value>) | String Value |  |
+| Show folders for - Custom - Scenes - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomScenes)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomScenes, <Value>) | String Value |  |
+| Show folders for - Custom Property Files - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomPropertyFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsCustomPropertyFile, <Value>) | String value |  |
+| Show folders for - Design Journal Template - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDesignJournalTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDesignJournalTemplate, <Value>) | String value |  |
+| Show folders for - Design Library - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDesignLibrary)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDesignLibrary, <Value>) | String value |  |
+| Show folders for - Dimension/Annotation Favorites - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDimensionFavorites)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDimensionFavorites, <Value>) | String value |  |
+| Show folders for - DimXpert Callout Format File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTxCalloutFormatFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTxCalloutFormatFile, <Value>) | String value |  |
+| Show folders for - DimXpert General Tolerance File | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTxGeneralFileLocation)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTxGeneralFileLocation, <Value>) | String value |  |
+| Show folders for - Drafting Standards - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDraftingStandard)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDraftingStandard, <Value>) | String value |  |
+| Show folders for - Drawing Scale Standards - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDrawingScaleStandard)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsDrawingScaleStandard, <Value>) | String value |  |
+| Show folders for - Function Builder Segment Type Definitions - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsFuncBldrSegTypeDefinitions)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsFuncBldrSegTypeDefinitions, <Value>) | String value |  |
+| Show folders for - General Tables template | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsGeneralTablesTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsGeneralTablesTemplate, <Value>) | String value |  |
+| Show folders for - Hatch Pattern File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHatchPatternFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHatchPatternFile, <Value>) | String value |  |
+| Show folders for - Hole Callout Format File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleCalloutFormatFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleCalloutFormatFile, <Value>) | String value |  |
+| Show folders for - Hole Table Templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleTableTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleTableTemplates, <Value>) | String value |  |
+| Show folders for - Hole Wizard Favorites Database - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleWizardFavoritesDB)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsHoleWizardFavoritesDB, <Value>) | String value |  |
+| Show folders for - Line Style Definitions - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsLineStyleDefinitions)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsLineStyleDefinitions, <Value>) | String value |  |
+| Show folders for - Macros - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMacros)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMacros, <Value>) | String value |  |
+| Show folders for - Macro Feature Files - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMacroFeatures)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMacroFeatures, <Value>) | String value |  |
+| Show folders for - Material Databases - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMaterialDatabases)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsMaterialDatabases, <Value>) | String value |  |
+| Show folders for - Punch Table Template - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsPunchTableTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsPunchTableTemplate, <Value>) | String value |  |
+| Show folders for - Revision Table Templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsRevisionTableTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsRevisionTableTemplates, <Value>) | String value |  |
+| Show folders for - Search Paths - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSearchPaths)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSearchPaths, <Value>) | String value |  |
+| Show folders for - Sheet Formats - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSheetFormat)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSheetFormat, <Value>) | String value |  |
+| Show folders for - Sheet Metal Bend Line Note File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendNoteFormatFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendNoteFormatFile, <Value>) | String value |  |
+| Show folders for - Sheet Metal Bend Tables - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendTable)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsBendTable, <Value>) | String value |  |
+| Show folders for - Sheet Metal Gauge Table - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSheetMetalGaugeTable)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSheetMetalGaugeTable, <Value>) | String value |  |
+| Show folders for - Spelling Folders - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSpellingFolders)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSpellingFolders, <Value>) | String value |  |
+| Show folders for - Sustainability Report Template Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSustainabilityReportTemplateFolder)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSustainabilityReportTemplateFolder, <Value>) | String value |  |
+| Show folders for - Symbol Library File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSymbolLibraryFolder)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsSymbolLibraryFolder, <Value>) | String value |  |
+| Show folders for - Textures - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTextures)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTextures, <Value>) | String value |  |
+| Show folders for - Thread Profiles - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsThreadProfiles)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsThreadProfiles, <Value>) | String value |  |
+| Show folders for - Title Block Table Template - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTitleBlockTableTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsTitleBlockTableTemplate, <Value>) | String value |  |
+| Show folders for - Weld Table Template - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldTableTemplate)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldTableTemplate, <Value>) | String value |  |
+| Show folders for - Weldment Cut List Templates - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentCutListTemplates)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentCutListTemplates, <Value>) | String value |  |
+| Show folders for - Weldment Profiles - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentProfiles)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentProfiles, <Value>) | String value |  |
+| Show folders for - Weldment Property File - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentPropertyFile)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsWeldmentPropertyFile, <Value>) | String value |  |
+| Show folders for - 3D PDF Themes - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsThemeFolder)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsThemeFolder, <Value>) | String value |  |
+| Show folders for - Appearance Folders - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsAppearances)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsAppearances, <Value>) | String value |  |
+| Show folders for - Light Folders - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsLights)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsLights, <Value>) | String value |  |
+| Show folders for - Scene Folders - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsScenes)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsScenes, <Value>) | String value |  |
+| Show folders for - Hole Tags List - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swHoleTagsList)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swHoleTagsList, <Value>) | String value |  |
+| Show folders for - Structure System Connection Elements - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsStructureSystemsConnectionElements)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsStructureSystemsConnectionElements, <Value>) | String value |  |
+| Show folders for - Inspection Project Template Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionProjects)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionProjects, <Value>) | String value |  |
+| Show folders for - Inspection Report Template Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionReports)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionReports, <Value>) | String value |  |
+| Show folders for - Inspection Default Export Folder - Folders | ISldWorks::GetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionExports)  ISldWorks::SetUserPreferenceStringValue(swUserPreferenceStringValue\_e.swFileLocationsInspectionExports, <Value>) | String value |  |
+
+Obsolete Enumerators
+
+| Enumerator | Comment |
+| swFileLocationsJournalFile | Obsolete |
+| swFileLocationsLibraryFeatures | Obsolete; use [swFileLocationsDesignLibrary](#DesignLibrary) |
+| swFileLocationsPaletteAssemblies | Obsolete; use [swFileLocationsDesignLibrary](#DesignLibrary) |
+| swFileLocationsPaletteFeatures | Obsolete; use [swFileLocationsDesignLibrary](#DesignLibrary) |
+| swFileLocationsPaletteFormTools | Obsolete; use [swFileLocationsDesignLibrary](#DesignLibrary) |
+| swFileLocationsPaletteParts | Obsolete; use [swFileLocationsDesignLibrary](#DesignLibrary) |
+| swFileLocationsDesignCheckerFile | Obsolete |
+| swStructureSystemsFolder | Obsolete |
+| swLocationsWebFolders | Obsolete |
+| swFileLocations3DCCModelFolder | Obsolete |

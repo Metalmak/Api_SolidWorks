@@ -1,0 +1,31 @@
+<!-- source: pdmprowebapihelp/PDM Pro API_ws~r-api-{uri}~o-HttpDelete.html -->
+
+PDM Pro API Web Service
+
+|  |  |
+| --- | --- |
+| Delete | api/{uri} |
+
+Collapse All
+Expand All
+
+|  |
+| --- |
+| [PDM Pro API Web Service](PDM%20Pro%20API_ws.html) > [Default Resource Group](PDM%20Pro%20API_ws~g-c04faa88-4b08-4558-9a22-06d58b3bb4ca.html) : api/{uri} (Delete) |
+
+Description
+
+Uses the specified URI to delete information.
+
+Parameters
+
+| Name | Description | Data Type |
+| --- | --- | --- |
+| uri | (URI parameter) Uniform resource identifier (required) | string |
+
+Response (application/json, text/json, application/xml, text/xml)
+
+See Also
+
+[Default Resource Group](PDM%20Pro%20API_ws~g-c04faa88-4b08-4558-9a22-06d58b3bb4ca.html)
+| [PDM Pro API Web Service](PDM%20Pro%20API_ws.html)

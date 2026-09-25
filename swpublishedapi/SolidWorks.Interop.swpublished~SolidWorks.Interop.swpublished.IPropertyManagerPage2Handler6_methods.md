@@ -1,0 +1,66 @@
+<!-- source: swpublishedapi/SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6_methods.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Custom Interfaces API Help | Send comments on this topic. |
+| IPropertyManagerPage2Handler6 Interface Methods | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swpublished Namespace](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished_namespace.html) : IPropertyManagerPage2Handler6 Interface |
+
+For a list of all members of this type, see [IPropertyManagerPage2Handler6 members](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6_members.html).
+
+# ![](dotnetimages/collapse.gif)Public Methods
+
+|  | Name | Description |
+| --- | --- | --- |
+| ![ Method](dotnetimages/Method.gif) | [AfterActivation](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~AfterActivation.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::After Activation](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~AfterActivation.html). |
+| ![ Method](dotnetimages/Method.gif) | [AfterClose](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~AfterClose.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::AfterClose](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~AfterClose.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnActiveXControlCreated](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnActiveXControlCreated.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnActiveXControlCreated](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnActiveXControlCreated.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnButtonPress](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnButtonPress.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnButtonPress](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnButtonPress.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnCheckboxCheck](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnCheckboxCheck.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnCheckboxCheck](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnCheckboxCheck.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnClose](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnClose.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnClose](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnClose.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnComboboxEditChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnComboboxEditChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnComboboxEditChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnComboboxEditChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnComboboxSelectionChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnComboboxSelectionChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnComboboxSelectionChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnComboboxSelectionChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnGroupCheck](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnGroupCheck.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnGroupCheck](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnGroupCheck.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnGroupExpand](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnGroupExpand.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnGroupExpand](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnGroupExpand.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnHelp](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnHelp.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnHelp](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnHelp.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnKeystroke](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnKeystroke.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnKeystroke](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnKeystroke.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnListboxSelectionChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnListboxSelectionChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnListboxSelectionChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnListboxSelectionChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnNextPage](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnNextPage.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnNextPage](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnNextPage.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnNumberboxChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnNumberboxChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnNumberboxChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnNumberboxChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnOptionCheck](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnOptionCheck.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnOptionCheck](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnOptionCheck.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnPopupMenuItem](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnPopupMenuItem.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnPopupMenuItem](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnPopupMenuItem.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnPopupMenuItemUpdate](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnPopupMenuItemUpdate.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnPopupMenuItemUpdate.](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnPopupMenuItemUpdate.html) |
+| ![ Method](dotnetimages/Method.gif) | [OnPreview](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnPreview.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnPreview](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnPreview.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnPreviousPage](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnPreviousPage.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnPreviousPage](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnPreviousPage.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnRedo](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnRedo.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnRedo](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnRedo.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSelectionboxCalloutCreated](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSelectionboxCalloutCreated.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSelectionboxCalloutCreated](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSelectionboxCalloutCreated.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSelectionboxCalloutDestroyed](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSelectionboxCalloutDestroyed.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSelectionboxCalloutDestroyed](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSelectionboxCalloutDestroyed.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSelectionboxFocusChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSelectionboxFocusChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSelectionboxFocusChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSelectionboxFocusChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSelectionboxListChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSelectionboxListChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSelectionboxListChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSelectionboxListChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSliderPositionChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSliderPositionChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSliderPositionChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSliderPositionChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSliderTrackingCompleted](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSliderTrackingCompleted.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSliderTrackingCompleted](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSliderTrackingCompleted.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnSubmitSelection](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnSubmitSelection.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnSubmitSelection](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnSubmitSelection.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnTabClicked](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnTabClicked.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnTabClicked](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnTabClicked.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnTextboxChanged](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnTextboxChanged.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnTextboxChanged](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnTextboxChanged.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnUndo](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnUndo.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnUndo](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnUndo.html). |
+| ![ Method](dotnetimages/Method.gif) | [OnWhatsNew](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6~OnWhatsNew.html) | Obsoleted. Superseded by [IPropertyManagerPage2Handler7::OnWhatsNew](SOLIDWORKS.Interop.swpublished~SOLIDWORKS.Interop.swpublished.IPropertyManagerPage2Handler7~OnWhatsNew.html). |
+
+[Top](#topBookmark)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IPropertyManagerPage2Handler6 Interface](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished.IPropertyManagerPage2Handler6.html)
+
+[SolidWorks.Interop.swpublished Namespace](SolidWorks.Interop.swpublished~SolidWorks.Interop.swpublished_namespace.html)

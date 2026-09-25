@@ -1,0 +1,15 @@
+<!-- source: swconst/DP_Tables-General.htm -->
+
+# SOLIDWORKS API Help
+
+# Document Properties > Tables > General
+
+![](DP_Tables-General.gif)
+
+| Setting | Get/Set Methods | Return Value or <Value> | Comments |
+| Border - Box Border | IModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingGeneralTableBorderLineWeight, swUserPreferenceOption\_e.swDetailingNoOptionSpecified)  IModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingGeneralTableBorderLineWeight, swUserPreferenceOption\_e.swDetailingNoOptionSpecified, swLineWeights\_e.<Value>) | See swLineWeights\_e for valid options |  |
+| Border - Grid Border | IModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingGeneralTableGridLineWeight, swUserPreferenceOption\_e.swDetailingNoOptionSpecified)  IModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingGeneralTableGridLineWeight, swUserPreferenceOption\_e.swDetailingNoOptionSpecified, swLineWeights\_e.<Value>) | See swLineWeights\_e for valid options |  |
+| Text - Font... | IModelDocExtension::GetUserPreferenceTextFormat(swUserPreferenceTextFormat\_e.swDetailingGeneralTableTextFormat, swUserPreferenceOption\_e.swDetailingNoOptionSpecified)  IModelDocExtension::SetUserPreferenceTextFormat(swUserPreferenceTextFormat\_e.swDetailingGeneralTableTextFormat, swUserPreferenceOption\_e.swDetailingNoOptionSpecified, <Value>) | See ITextFormat for font options | To set font property values, implement ITextFormat, set the appropriate ITextFormat member values, and pass the ITextFormat object in the API set method |
+| Leading zeroes | IModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingLeadingZero, swUserPreferenceOption\_e.swDetailingGeneralTable)  IModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingLeadingZero, swUserPreferenceOption\_e.swDetailingGeneralTable, swDetailingLeadingZero\_e.<Value>) | See swDetailingLeadingZero\_e for valid options |  |
+| Trailing zeroes | IModelDocExtension::GetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingDimTrailingZero, swUserPreferenceOption\_e.swDetailingGeneralTable)  IModelDocExtension::SetUserPreferenceInteger(swUserPreferenceIntegerValue\_e.swDetailingDimTrailingZero, swUserPreferenceOption\_e.swDetailingGeneralTable, swDetailingDimTrailingZero\_e.<Value>) | Valid options in swDetailingDimTrailingZero\_e:  * swDimShowTrailingZeroes * swDimRemoveTrailingZeroes * swDimRemoveOnlyOnZero |  |
+| Layer | IModelDocExtension::GetUserPreferenceString(swUserPreferenceStringValue\_e.swDetailingLayer, swUserPreferenceOption\_e.swDetailingGeneralTable)  IModelDocExtension::SetUserPreferenceString(swUserPreferenceStringValue\_e.swDetailingLayer, swUserPreferenceOption\_e.swDetailingGeneralTable, <Value>) | Valid options:   * "Border" * "Dimensions" * "Notes" * "BOM" * "FORMAT" * "None" | This setting is available only on drawings; depending on drawing, some options may not apply |

@@ -1,0 +1,75 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPrint3DDialog.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| IPrint3DDialog Interface | |
+| [See Also](#seealsobookmark)  [Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPrint3DDialog_members.html) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) : IPrint3DDialog Interface |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Allows access to the Print 3D dialog.
+
+**NOTE:** Click the **Members** link, located near the top of the topic, to see this interface's methods and properties.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Interface IPrint3DDialog ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IPrint3DDialog ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public interface IPrint3DDialog ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public interface class IPrint3DDialog ``` | |
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Print3DDialog.
+
+# ![](dotnetimages/collapse.gif)Accessors
+
+[IModelDocExtension::GetPrint3DDialog](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IModelDocExtension~GetPrint3DDialog.html)
+
+# ![](dotnetimages/collapse.gif)Access Diagram
+
+[Print3DDialog](SWObjectModel.pdf#Print3DDialog)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IPrint3DDialog Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IPrint3DDialog_members.html)
+
+[SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html)

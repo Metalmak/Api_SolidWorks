@@ -1,0 +1,83 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEnumComponents2.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| IEnumComponents2 Interface | |
+| [See Also](#seealsobookmark)  [Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEnumComponents2_members.html) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) : IEnumComponents2 Interface |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Allows access to a [components](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IComponent2.html) enumeration.
+
+**NOTE:** Click the **Members** link, located near the top of the topic, to see this interface's methods and properties.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Interface IEnumComponents2 ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IEnumComponents2 ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public interface IEnumComponents2 ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public interface class IEnumComponents2 ``` | |
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See EnumComponents2.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+For use in in-process DLLs only.
+
+# ![](dotnetimages/collapse.gif)Accessors
+
+[IDrSection::EnumExcludedComponents2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IDrSection~EnumExcludedComponents2.html)
+
+[IEnumComponents2::Clone](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IEnumComponents2~Clone.html)
+
+[IView::EnumHiddenComponents2](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.IView~EnumHiddenComponents2.html)
+
+# ![](dotnetimages/collapse.gif)Access Diagram
+
+[EnumComponents2](SWObjectModel.pdf#EnumComponents2)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IEnumComponents2 Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IEnumComponents2_members.html)
+
+[SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html)

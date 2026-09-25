@@ -1,0 +1,66 @@
+<!-- source: cworksapi/SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks.swsAddDefaultThermalStudyPlotResultError_e.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS Simulation API Help | Send comments on this topic. |
+| swsAddDefaultThermalStudyPlotResultError\_e Enumeration | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All  Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html) : swsAddDefaultThermalStudyPlotResultError\_e Enumeration |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Thermal study result plot errors
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Enum swsAddDefaultThermalStudyPlotResultError_e     Inherits System.Enum ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As swsAddDefaultThermalStudyPlotResultError_e ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public enum swsAddDefaultThermalStudyPlotResultError_e : System.Enum ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public enum class swsAddDefaultThermalStudyPlotResultError_e : public System.Enum ``` | |
+
+# ![](dotnetimages/collapse.gif)Members
+
+| Member | Description |
+| --- | --- |
+| **swsThermalResultNoError** | 0 = No error |
+| **swsThermalResultRangeError** | 1 = The thermal result type is not within the supported range |
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[SolidWorks.Interop.cosworks Namespace](SolidWorks.Interop.cosworks~SolidWorks.Interop.cosworks_namespace.html)

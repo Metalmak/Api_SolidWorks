@@ -1,0 +1,125 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2~Name2.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| Name2 Property (IComponent2) | |
+| [See Also](#seealsobookmark)  [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IComponent2 Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2.html) : Name2 Property (IComponent2) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets or sets the name of the selected component.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property Name2 As System.String ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IComponent2 Dim value As System.String   instance.Name2 = value   value = instance.Name2 ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.string Name2 {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.String^ Name2 {    System.String^ get();    void set ( &   System.String^ value); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Property Value
+
+Name of this component
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See Component2::Name2.
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Add Component and Mate (C++)](Add_Component_and_Mate_Example_CPlusPlus_COM.htm)
+
+[Change Material Properties (VBA)](Change_Material_Properties_Example_VB.htm)
+
+[Check Interference Using AssemblyDoc::ToolsCheckInterference2 (VBA)](Check_Interference_using_AssemblyDoc_ToolsCheckInterference2_Example_VB.htm)
+
+[Get Component Names and Types for Inplace Mate (VBA)](Get_Component_Names_and_Types_for_Inplace_Mate_Example_VB.htm)
+
+[Get Component via Display Dimension (VBA)](Get_Component_Via_Display_Dimension_Example_VB.htm)
+
+[Traverse Assembly at Component Level (VBA)](Traverse_Assembly_at_Component_Level_Example_VB.htm)
+
+[Traverse Assembly at Component and Feature Levels Using Recursion (VBA)](Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VB.htm)
+
+[Traverse Assembly at Component and Feature Levels Using Recursion (VB.NET)](Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_VBNET.htm)
+
+[Traverse Assembly at Component and Feature Levels Using Recursion (C#)](Traverse_Assembly_at_Component_and_Feature_Levels_Using_Recursion_Example_CSharp.htm)
+
+[Change Name of Component (C#)](Change_Name_of_Component_Example_CSharp.htm)
+
+[Change Name of Component (VB.NET)](Change_Name_of_Component_Example_VBNET.htm)
+
+[Change Name of Component (VBA)](Change_Name_of_Component_Example_VB.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This property returns a name that includes an instance number. For example:
+
+Part1-1
+
+indicates that this is the first instance of the Part1 Component2. If you are examining a component that is within a subassembly, then this property returns a name that includes the full hierarchical path of component names. For example:
+
+subAssem1-2/Part1-1
+
+indicates that this component (Part1) is the first instance within the subAssem1 Component2. It also shows that the second instance of subAssem1 is referenced.
+
+If you are setting the name of a component:
+
+* Before executing a name change, this property checks the swExtRefUpdateCompNames setting. If swExtRefUpdateCompNames is true, then the name change fails; if swExtRefUpdateCompNames is false, then the name change succeeds. Use [ISldWorks::GetUserPreferenceToggle](SOLIDWORKS.Interop.sldworks~SOLIDWORKS.Interop.sldworks.ISldWorks~GetUserPreferenceToggle.html) to change the swExtRefUpdateCompNames setting. Also, remember that some special characters are reserved by SOLIDWORKS, so be sure to use valid characters in the new name.
+
+  * The component must be selected.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IComponent2 Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2.html)
+
+[IComponent2 Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2_members.html)
+
+[IComponent2::GetSelectByIDString Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IComponent2~GetSelectByIDString.html)
+
+[IAssemblyDoc::GetComponentByName Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~GetComponentByName.html)
+
+[IAssemblyDoc::GetUnloadedComponentNames Method](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IAssemblyDoc~GetUnloadedComponentNames.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2001Plus FCS, Revision Number 10.0

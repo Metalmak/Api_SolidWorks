@@ -1,0 +1,49 @@
+<!-- source: obsoleteapi/ModelDoc2/ModelDoc2__Create3PointArc.htm -->
+
+# ModelDoc2::Create3PointArc
+
+This method is obsolete and has been superseded
+by SketchManager::Create3PointArc.
+
+Description
+
+This method creates a 3-point arc.
+
+Syntax (OLE Automation)
+
+retval = ModelDoc2.Create3PointArc
+( p1x, p1y, p1z, p2x, p2y, p2z, p3x, p3y, p3z)
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (double) p1x | X value of point 1 |
+| Input: | (double) p1y | Y value of point 1 |
+| Input: | (double) p1z | Z value of point 1 |
+| Input: | (double) p2x | X value of point 2 |
+| Input: | (double) p2y | Y value of point 2 |
+| Input: | (double) p2z | Z value of point 2 |
+| Input: | (double) p3x | X value of point 3 |
+| Input: | (double) p3y | Y value of point 3 |
+| Input: | (double) p3z | Z value of point 3 |
+| Return: | (BOOL) retval | TRUE if successfully created, FALSE otherwise |
+
+Syntax (COM)
+
+status = ModelDoc2->Create3PointArc
+( p1x, p1y, p1z, p2x, p2y, p2z, p3x, p3y, p3z, &retval )
+
+|  |  |  |
+| --- | --- | --- |
+| Input: | (double) p1x | X value of point 1 |
+| Input: | (double) p1y | Y value of point 1 |
+| Input: | (double) p1z | Z value of point 1 |
+| Input: | (double) p2x | X value of point 2 |
+| Input: | (double) p2y | Y value of point 2 |
+| Input: | (double) p2z | Z value of point 2 |
+| Input: | (double) p3x | X value of point 3 |
+| Input: | (double) p3y | Y value of point 3 |
+| Input: | (double) p3z | Z value of point 3 |
+| Output: | (VARIANT\_BOOL) retval | TRUE if successfully created, FALSE otherwise |
+| Return: | (HRESULT) status | S\_OK if successful |
+
+Remarks

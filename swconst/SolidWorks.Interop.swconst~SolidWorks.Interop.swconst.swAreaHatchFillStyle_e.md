@@ -1,0 +1,67 @@
+<!-- source: swconst/SolidWorks.Interop.swconst~SolidWorks.Interop.swconst.swAreaHatchFillStyle_e.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Enumerations | Send comments on this topic. |
+| swAreaHatchFillStyle\_e Enumeration | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All  Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.swconst Namespace](SolidWorks.Interop.swconst~SolidWorks.Interop.swconst_namespace.html) : swAreaHatchFillStyle\_e Enumeration |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Area hatch fill styles.
+
+# ![](dotnetimages/collapse.gif)Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Public Enum swAreaHatchFillStyle_e     Inherits System.Enum ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As swAreaHatchFillStyle_e ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public enum swAreaHatchFillStyle_e : System.Enum ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public enum class swAreaHatchFillStyle_e : public System.Enum ``` | |
+
+# ![](dotnetimages/collapse.gif)Members
+
+| Member | Description |
+| --- | --- |
+| **swAreaHatchFillStyle\_None** | 1 |
+| **swAreaHatchFillStyle\_Pattern** | 2 |
+| **swAreaHatchFillStyle\_Solid** | 3 |
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[SolidWorks.Interop.swconst Namespace](SolidWorks.Interop.swconst~SolidWorks.Interop.swconst_namespace.html)

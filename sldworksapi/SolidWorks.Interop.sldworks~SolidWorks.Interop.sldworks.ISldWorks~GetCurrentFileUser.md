@@ -1,0 +1,101 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks~GetCurrentFileUser.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| GetCurrentFileUser Method (ISldWorks) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [ISldWorks Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks.html) : GetCurrentFileUser Method (ISldWorks) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+*FilePathName*
+:   Full path and filename of the document
+
+Gets the name of the user who has the the specified document open.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Function GetCurrentFileUser( _    ByVal FilePathName As System.String _ ) As System.String ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As ISldWorks Dim FilePathName As System.String Dim value As System.String   value = instance.GetCurrentFileUser(FilePathName) ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.string GetCurrentFileUser(     System.string FilePathName ) ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` System.String^ GetCurrentFileUser(  &   System.String^ FilePathName ) ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Parameters
+
+*FilePathName*
+:   Full path and filename of the document
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See SldWorks::GetCurrentFileUser.
+
+# ![](dotnetimages/collapse.gif)Example
+
+**Visual Basic for Applications (VBA)**
+
+**'-----------------------------------**
+
+Option Explicit
+
+Dim swApp As SldWorks.SldWorks
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+' Substitute your path and filename
+
+Debug.Print swApp.GetCurrentFileUser("C:\temp\b&r.sldprt")
+
+End Sub
+
+**'-----------------------------------**
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[ISldWorks Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks.html)
+
+[ISldWorks Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.ISldWorks_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2009 FCS, Revision Number 17.0

@@ -1,0 +1,85 @@
+<!-- source: sldworksapi/SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData~RevolutionVal.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS API Help | Send comments on this topic. |
+| RevolutionVal Property (IScrewMateFeatureData) | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic (Declaration) Language Filter: Visual Basic (Usage) Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [SolidWorks.Interop.sldworks Namespace](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks_namespace.html) > [IScrewMateFeatureData Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData.html) : RevolutionVal Property (IScrewMateFeatureData) |
+
+[ ]
+
+Visual Basic (Declaration)
+
+[ ]
+
+Visual Basic (Usage)
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Gets or sets either the number of revolutions one component makes for each unit length that the other component translates or the distance that one component translates for each revolution of the other component.
+
+# ![](dotnetimages/collapse.gif).NET Syntax
+
+| Visual Basic (Declaration) |  |
+| --- | --- |
+| ``` Property RevolutionVal As System.Double ``` | |
+
+| Visual Basic (Usage) | ![](dotnetimages/copycode.gif)Copy Code |
+| --- | --- |
+| ``` Dim instance As IScrewMateFeatureData Dim value As System.Double   instance.RevolutionVal = value   value = instance.RevolutionVal ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` System.double RevolutionVal {get; set;} ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` property System.double RevolutionVal {    System.double get();    void set ( &   System.double value); } ``` | |
+
+**NOTE:** See [Differences Between Unmanaged C++ and C++/CLI Code](DifferencesBetweenUnManagedAndCPPCLI.htm).
+
+#### Property Value
+
+Revolution value (see **Remarks**)
+
+# ![](dotnetimages/collapse.gif)Visual Basic for Applications (VBA) Syntax
+
+See ScrewMateFeatureData::RevolutionVal.
+
+# ![](dotnetimages/collapse.gif)Example
+
+See the [IScrewMateFeatureData](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData.html) example.
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+If [IScrewMateFeatureData::RevolutionType](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData~RevolutionType.html) is set to swScrewMateDistanceOptions\_e:
+
+* swDistancePerRevolution, then specify this property with the distance that one component translates for each revolution of the other component.* swRevolutionsPerUnitLength, then specify this property with the number of revolutions of one component for each unit length that the other component translates. Set swUserPreferencesIntegerValue\_e.swUnitsLinear to a unit length as defined in swLengthUnit\_e.
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IScrewMateFeatureData Interface](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData.html)
+
+[IScrewMateFeatureData Members](SolidWorks.Interop.sldworks~SolidWorks.Interop.sldworks.IScrewMateFeatureData_members.html)
+
+# ![](dotnetimages/collapse.gif)Availability
+
+SOLIDWORKS 2019 FCS, Revision Number 27.0

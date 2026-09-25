@@ -1,0 +1,64 @@
+<!-- source: routingapi/Get_Wires_Sketch_Segments_and_Sketches_Example_VB.htm -->
+
+# SOLIDWORKS Routing API Help
+
+# Get Wires, Sketch Segments, and Sketches Example (VBA)
+
+This example shows how to get the wires, route sketch segment IDs, sketch
+segments, and sketches.
+
+...
+
+vWires = rtElectricalRoute.GetWires
+
+...
+
+Set rtWire = vWire
+
+...
+
+For Each vWire In vWires
+
+        Set
+rtWire = vWire
+
+            vRouteSegmentIDs
+= rtWire.GetRouteSegmentIDs
+
+            If
+Not IsEmpty(vRouteSegmentIDs) Then
+
+               For
+lIdx = LBound(vRouteSegmentIDs) To UBound(vRouteSegmentIDs)
+
+                    lSegmentId
+= vRouteSegmentIDs(lIdx)
+
+                    Debug.Print
+"Segment ID = " & lSegmentId
+
+                    vSketchSegments
+= rtElectricalRoute.GetSketchSegments(lSegmentId)
+
+                    If
+Not IsEmpty(vSketchSegments) Then
+
+                        For
+Each vSketchSegment In vSketchSegments
+
+                            Set
+swSketchSegment = vSketchSegment
+
+                            Debug.Assert
+(Not swSketchSegment Is Nothing)
+
+                            bRetVal
+= swSketchSegment.Select4(True, Nothing)
+
+                            Debug.Assert
+(bRetVal)
+
+                            Set
+swSketch = swSketchSegment.GetSketch
+
+...

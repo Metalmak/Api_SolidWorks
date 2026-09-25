@@ -1,0 +1,61 @@
+<!-- source: epdmapi/EPDM.Interop.epdm~EPDM.Interop.epdm.EdmAddInInfo2~mbsClassID.html -->
+
+![](dotnetimages/collapse.gif)
+![](dotnetimages/expand.gif)
+![](dotnetimages/collapse.gif)
+![](dotnetimages/expand.gif)
+![](dotnetimages/drpdown.gif)
+![](dotnetimages/drpdown_orange.gif)
+![](dotnetimages/copycode.gif)
+![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS PDM Professional API Help | Send Feedback |
+
+| mbsClassID Field | |
+| [See Also](#seealsobookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All Expand All  ![](dotnetimages/drpdown.gif)  Language Filter: All  Language Filter: Multiple Language Filter: Visual Basic Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [EPDM.Interop.epdm Namespace](EPDM.Interop.epdm~EPDM.Interop.epdm_namespace.html) > [EdmAddInInfo2 Structure](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmAddInInfo2.html) : mbsClassID Field |
+
+[ ]
+
+Visual Basic
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+ID of class that implements [IEdmAddIn5](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmAddIn5.html).
+
+# ![](dotnetimages/collapse.gif)Syntax
+
+| Visual Basic |  |
+| --- | --- |
+| ``` Public mbsClassID As System.String ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public System.string mbsClassID ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public: System.String^ mbsClassID ``` | |
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[EdmAddInInfo2 Structure](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmAddInInfo2.html)
+
+[EdmAddInInfo2 Members](EPDM.Interop.epdm~EPDM.Interop.epdm.EdmAddInInfo2_members.html)

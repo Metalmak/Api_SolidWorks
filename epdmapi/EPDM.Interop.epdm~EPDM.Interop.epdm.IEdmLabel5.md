@@ -1,0 +1,79 @@
+<!-- source: epdmapi/EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmLabel5.html -->
+
+![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/collapse.gif) ![](dotnetimages/expand.gif) ![](dotnetimages/drpdown.gif) ![](dotnetimages/drpdown_orange.gif) ![](dotnetimages/copycode.gif) ![](dotnetimages/copycodeHighlight.gif)
+
+|  |  |
+| --- | --- |
+| SOLIDWORKS PDM Professional API Help | Send Feedback |
+| IEdmLabel5 Interface | |
+| [See Also](#seealsobookmark)  [Members](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmLabel5_members.html)   [Example](#ExampleBookmark) | |
+
+|  |
+| --- |
+| ![](dotnetimages/collapse.gif) Collapse All  Expand All ![](dotnetimages/drpdown.gif)  Language Filter: All Language Filter: Multiple Language Filter: Visual Basic Language Filter: C# Language Filter: C++/CLI |
+
+|  |
+| --- |
+| [EPDM.Interop.epdm Namespace](EPDM.Interop.epdm~EPDM.Interop.epdm_namespace.html) : IEdmLabel5 Interface |
+
+[ ]
+
+Visual Basic
+
+[ ]
+
+C#
+
+[ ]
+
+C++/CLI
+
+Allows you to access a file or folder label.
+
+**NOTE:** Click the **Members** link, located near the top of the topic, to see this interface's methods and properties.
+
+# ![](dotnetimages/collapse.gif)Syntax
+
+| Visual Basic |  |
+| --- | --- |
+| ``` Public Interface IEdmLabel5     Inherits IEdmObject5  ``` | |
+
+| C# |  |
+| --- | --- |
+| ``` public interface IEdmLabel5 : IEdmObject5  ``` | |
+
+| C++/CLI |  |
+| --- | --- |
+| ``` public interface class IEdmLabel5 : public IEdmObject5  ``` | |
+
+# ![](dotnetimages/collapse.gif)Example
+
+[Create Labels on Folders (VB.NET)](Create_Label_Example_VBNET.htm)
+
+[Create Labels on Folders (C#)](Create_Label_Example_CSharp.htm)
+
+# ![](dotnetimages/collapse.gif)Remarks
+
+This interface:
+
+* inherits from [IEdmObject5](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmObject5.html).* is extended by [IEdmLabel6](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmLabel6.html) which provides the ability to update the history of, delete, and rename file labels.
+
+# ![](dotnetimages/collapse.gif)Accessors
+
+[IEdmEnumeratorVersion5::GetNextLabel](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmEnumeratorVersion5~GetNextLabel.html)
+
+[IEdmFolder5::GetNextLabel](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmFolder5~GetNextLabel.html)
+
+[IEdmVault5::GetObject](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmVault5~GetObject.html)
+
+# ![](dotnetimages/collapse.gif)See Also
+
+####
+
+[IEdmLabel5 Members](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmLabel5_members.html)
+
+[EPDM.Interop.epdm Namespace](EPDM.Interop.epdm~EPDM.Interop.epdm_namespace.html)
+
+[IEdmFile16::CreateLabel Method ()](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmFile16~CreateLabel.html)
+
+[IEdmFolder5::CreateLabel Method ()](EPDM.Interop.epdm~EPDM.Interop.epdm.IEdmFolder5~CreateLabel.html)
